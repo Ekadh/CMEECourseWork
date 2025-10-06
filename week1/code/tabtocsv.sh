@@ -15,7 +15,13 @@ fi
 if [ "$(grep -o $'\t' "$1" | wc -l)" -eq 0 ] 
 then
     echo "Input file must be a tab-delimited file"
-    exit 1
+    exit 2
+fi
+
+if [ ! -f "$1" ]
+then
+    echo "File not found"
+    exit 3
 fi
 
 echo "Creating a csv version of $1 .."
