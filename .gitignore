@@ -6,4 +6,5 @@
 !spawannxs.txt
 !*.fasta
 !*.md
+!180*.csv
 sandbox/
