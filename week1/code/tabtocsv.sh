@@ -11,7 +11,14 @@ then
     echo "Please input a file"
     exit 1
 fi
-echo "Creating a comma-delimited version of $1 .."
+
+if [ "$(grep -o $'\t' "$1" | wc -l)" -eq 0 ] 
+then
+    echo "Input file must be a tab-delimited file"
+    exit 1
+fi
+
+echo "Creating a csv version of $1 .."
 cat $1 | tr -s "\t" "," >> $1.csv
 echo "Done!"
 exit 0

@@ -5,7 +5,7 @@ then
     exit 1
 fi
 if [[ "$1" != *.csv ]]; then
-    echo "Input file must be a csv file"
+    echo "Input file must be a .csv file"
     exit 1
 fi
 echo "Creating a space-delimited version of $1 .."

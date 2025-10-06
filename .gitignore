@@ -1,2 +1,9 @@
-*~ 
-*.tmp
+*.*
+!*.sh
+!FirstBiblio.bib
+!FirstExample.tex
+!UnixPrac1.txt
+!spawannxs.txt
+!*.fasta
+!*.md
+sandbox/
