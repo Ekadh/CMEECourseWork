@@ -18,7 +18,14 @@ Here is the data structure for all week1 code files and data:
 │       ├── variables.sh
 │   ├── data
 │       ├── fasta
+│            ├── 407228326.fasta
+│            ├── 407228412.fasta
+│            ├── E.coli.fasta
 │       ├── temperatures
+│            ├── 1800.csv
+│            ├── 1801.csv
+│            ├── 1802.csv
+│            ├── 1803.csv
 │       ├── spawannxs.txt 
 ├── README.md
 
@@ -35,3 +42,10 @@ Here is the data structure for all week1 code files and data:
 10. tiff2png.sh > A script that converts tiff images files to png files
 11. unixprac1.txt > A text file that contains all the lines of script needed to execute each question of the fasta exercises using the local paths to the fasta files
 12. variables.sh > A script that assigns variables, calculates the sum of the inputted variables, and outputs their individual values
+
+
+# Data
+
+1. fasta > A folder containing three fasta DNA files
+2. temperatures > A folder containing temperature csv files
+3. spawannxs.txt > A file containing scientific names of birds
