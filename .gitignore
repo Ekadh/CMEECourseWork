@@ -12,5 +12,6 @@
 !180*.csv
 !.gitkeep
 
-# No sandbox please
+# No sandbox please and no results except gitkeep
 week1/sandbox/
+week1/results/

@@ -12,5 +12,5 @@ fi
 cat $1 > ../results/$3
 cat $2 >> ../results/$3
 echo "The merged file is"
-cat $3
+cat ../results/$3
 exit 0
