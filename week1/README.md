@@ -9,32 +9,32 @@ Below is the structure of the folder and brief descriptions of all included scri
 
 ## 📁 Directory Structure
 
-├── week1
-│ ├── code
-│ │ ├── boilerplate.sh
-│ │ ├── compilelatex.sh
-│ │ ├── concatenatetwofiles.sh
-│ │ ├── countlines.sh
-│ │ ├── csvtospace.sh
-│ │ ├── firstbiblio.bib
-│ │ ├── firstexample.tex
-│ │ ├── myexamplescript.sh
-│ │ ├── tabtocsv.sh
-│ │ ├── tiff2png.sh
-│ │ ├── unixprac1.txt
-│ │ ├── variables.sh
-│ ├── data
-│ │ ├── fasta
-│ │ │ ├── 407228326.fasta
-│ │ │ ├── 407228412.fasta
-│ │ │ ├── E.coli.fasta
-│ │ ├── temperatures
-│ │ │ ├── 1800.csv
-│ │ │ ├── 1801.csv
-│ │ │ ├── 1802.csv
-│ │ │ ├── 1803.csv
-│ │ ├── spawannxs.txt
-├── README.md
+├── week1  
+│ ├── code  
+│ │ ├── boilerplate.sh  
+│ │ ├── compilelatex.sh  
+│ │ ├── concatenatetwofiles.sh  
+│ │ ├── countlines.sh  
+│ │ ├── csvtospace.sh  
+│ │ ├── firstbiblio.bib  
+│ │ ├── firstexample.tex  
+│ │ ├── myexamplescript.sh  
+│ │ ├── tabtocsv.sh  
+│ │ ├── tiff2png.sh  
+│ │ ├── unixprac1.txt  
+│ │ ├── variables.sh  
+│ ├── data  
+│ │ ├── fasta  
+│ │ │ ├── 407228326.fasta  
+│ │ │ ├── 407228412.fasta  
+│ │ │ ├── E.coli.fasta  
+│ │ ├── temperatures  
+│ │ │ ├── 1800.csv  
+│ │ │ ├── 1801.csv  
+│ │ │ ├── 1802.csv  
+│ │ │ ├── 1803.csv  
+│ │ ├── spawannxs.txt  
+├── README.md  
 
 ---
 
