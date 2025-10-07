@@ -1,13 +1,11 @@
 # week1: Scripts and data
 
-# Week 1: Shell Scripting and Data Processing
-
-This directory contains all code and data files for **Week 1** of the coursework.  
+This directory contains all code and data files for **week 1** of the coursework.  
 Below is the structure of the folder and brief descriptions of all included scripts and data files.
 
 ---
 
-## 📁 Directory Structure
+## Directory Structure
 
 ├── week1  
 │ ├── code  
@@ -38,7 +36,7 @@ Below is the structure of the folder and brief descriptions of all included scri
 
 ---
 
-## 🧩 Scripts
+## Scripts
 
 1. **boilerplate.sh** — Outputs “This is a shell script.”
 2. **compilelatex.sh** — Compiles LaTeX source files into readable output.
@@ -55,7 +53,7 @@ Below is the structure of the folder and brief descriptions of all included scri
 
 ---
 
-## 📊 Data
+## Data
 
 1. **fasta/** — Folder containing three FASTA DNA sequence files.  
 2. **temperatures/** — Folder containing four temperature CSV files.  
