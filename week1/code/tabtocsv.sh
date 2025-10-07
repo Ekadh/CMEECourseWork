@@ -25,6 +25,6 @@ then
 fi
 
 echo "Creating a csv version of $1 .."
-cat $1 | tr -s "\t" "," >> $1.csv
-echo "Done!"
+cat $1 | tr -s "\t" "," >> ../results/$1.csv
+echo "Done, check your results folder"
 exit 0

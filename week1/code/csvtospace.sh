@@ -16,6 +16,6 @@ if [[ "$1" != *.csv ]]; then
     exit 3
 fi
 echo "Creating a space-delimited version of $1 .."
-cat "$1" | tr -s "," " " > $2.txt
-echo "Done"
+cat "$1" | tr -s "," " " > ../results/$2.txt
+echo "Done, check your results folder"
 exit 0
