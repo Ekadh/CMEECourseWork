@@ -10,8 +10,8 @@
 !*.fasta
 !*.md
 !180*.csv
-!.gitkeep
+!*/results/.gitkeep
 
 # No sandbox please and no results except gitkeep
-week1/sandbox/
-week1/results/
+*/sandbox/*
+*/results/*
