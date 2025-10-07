@@ -10,6 +10,7 @@
 !*.fasta
 !*.md
 !180*.csv
+!.gitkeep
 
 # No sandbox please
 week1/sandbox/
