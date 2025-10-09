@@ -1,5 +1,5 @@
 # Just gonna ignore all files by default (whitelist)
-*
+*.*
 
 # Keep currently required filenames and types
 !*.sh

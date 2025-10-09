@@ -1,10 +1,17 @@
 #!/bin/bash
 
-for f in *.tif;
+shopt -s nullglob
+tifs=(../data/*.tif)
+if [ ${#tifs[@]} -eq 0 ]; then
+    echo "No tifs found in this folder"
+    exit 1
+fi
+
+for file in "${tifs[@]}";
     do
-        echo "Converting $f";
-        convert "$f" "(basename "$f" .tif).png";
+        echo "Converting $file"
+        convert "$file" "../results/$(basename "$file" .tif).png"
+done
 
-    done
-
+exit 0
     

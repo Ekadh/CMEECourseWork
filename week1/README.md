@@ -32,6 +32,7 @@ Below is the structure of the folder and brief descriptions of all included scri
 │ │ │ ├── 1802.csv  
 │ │ │ ├── 1803.csv  
 │ │ ├── spawannxs.txt  
+│ │ ├── NCBS_map.tif  
 ├── README.md  
 
 ---
@@ -47,7 +48,7 @@ Below is the structure of the folder and brief descriptions of all included scri
 7. **firstexample.tex** — Main LaTeX source file containing structure and text.
 8. **myexamplescript.sh** — Simple script that prints a greeting to the user.
 9. **tabtocsv.sh** — Converts tab-delimited files into comma-separated values files.
-10. **tiff2png.sh** — Converts TIFF image files into PNG format.
+10. **tiff2png.sh** — Converts TIFF image files in the data folder into PNG format.
 11. **unixprac1.txt** — Contains all commands needed to complete FASTA-related exercises.
 12. **variables.sh** — Assigns variables, calculates their sum, and prints the results.
 
@@ -58,5 +59,6 @@ Below is the structure of the folder and brief descriptions of all included scri
 1. **fasta/** — Folder containing three FASTA DNA sequence files.  
 2. **temperatures/** — Folder containing four temperature CSV files.  
 3. **spawannxs.txt** — Text file containing scientific names of bird species.
+4. **NCBS_map.tif** - A .tif file of my old campus to convert to a .png file.
 
 ---
