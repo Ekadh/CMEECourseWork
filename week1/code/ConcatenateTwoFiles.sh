@@ -1,7 +1,8 @@
 #!/bin/bash
+# Check results folder for the output
 if [ $# -lt 3 ]
 then
-    echo "Please input the two files to be concatenated and the name of the output file"
+    echo "Please input the two files to be concatenated and the name of the output file (check the results folder afterwards)"
     exit 1
 fi
 if [ ! -f "$1" ] || [ ! -f "$2" ]

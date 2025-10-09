@@ -11,6 +11,7 @@
 !*.md
 !180*.csv
 !*/results/.gitkeep
+!*/code/*.py
 
 # No sandbox please and no results except gitkeep
 */sandbox/*
