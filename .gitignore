@@ -1,18 +1,15 @@
-# Just gonna ignore all files by default (whitelist)
+# Just gonna ignore all files by default (whitelist method)
 *.*
 
 # Keep currently required filenames and types
 !*.sh
-!FirstBiblio.bib
-!FirstExample.tex
-!UnixPrac1.txt
-!spawannxs.txt
-!*.fasta
-!*.md
-!180*.csv
 !*/results/.gitkeep
-!*/code/*.py
+!*/code/
+!*/code/*
+!*/data/
+!*/data/*
 
 # No sandbox please and no results except gitkeep
 */sandbox/*
 */results/*
+.DS_Store
