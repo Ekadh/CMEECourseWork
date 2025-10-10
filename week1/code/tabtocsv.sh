@@ -12,19 +12,19 @@ then
     exit 1
 fi
 
-if [ "$(grep -o $'\t' "$1" | wc -l)" -eq 0 ] 
-then
-    echo "Input file must be a tab-delimited file"
-    exit 2
-fi
-
 if [ ! -f "$1" ]
 then
     echo "File not found"
+    exit 2
+fi
+
+if [ "$(grep -o $'\t' "$1" | wc -l)" -eq 0 ] 
+then
+    echo "Input file must be a tab-delimited file"
     exit 3
 fi
 
 echo "Creating a csv version of $1 .."
-cat $1 | tr -s "\t" "," >> ../results/$1.csv
+cat $1 | tr -s "\t" "," >> "../results/$(basename "$1" .txt).csv"
 echo "Done, check your results folder"
 exit 0
