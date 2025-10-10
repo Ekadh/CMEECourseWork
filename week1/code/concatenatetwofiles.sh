@@ -7,7 +7,7 @@ then
 fi
 if [ ! -f "$1" ] || [ ! -f "$2" ]
 then 
-    echo "One of the files does not exist"
+    echo "At least one of the files does not exist"
     exit 2
 fi
 cat $1 > ../results/$3

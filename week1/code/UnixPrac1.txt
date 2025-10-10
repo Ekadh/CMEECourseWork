@@ -1,5 +1,0 @@
-#1 wc -l ../data/fasta/*.fasta
-#2 cat ../data/fasta/E.coli.fasta | tail -n +2
-#3 cat ../data/fasta/E.coli.fasta | tail -n +2 | tr -d '\n' | wc -m
-#4 cat ../data/fasta/E.coli.fasta | tail -n +2 | tr -d '\n' | grep -o -i atgc | wc -l
-#5 echo "scale=3; $(cat ../data/fasta/E.coli.fasta | tail -n +2 | tr -d '\n' | grep -o -i '[at]' | wc -l)/$(cat ../data/fasta/E.coli.fasta | tail -n +2 | tr -d '\n' | grep -o -i '[gc]' | wc -l)" | bc
