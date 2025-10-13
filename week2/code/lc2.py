@@ -19,10 +19,14 @@ rainfall = (('JAN',111.4),
 
 hundred_mm = [i for i in rainfall if i[1] > 100]
 
-print("Months with more than 100mm of rainfall: ", hundred_mm)
+print("Months and rainfall amounts where rainfall has exceeded 100mm in the UK in 1910: ", hundred_mm)
  
 # (2) Use a list comprehension to create a list of just month names where the
 # amount of rain was less than 50 mm. 
+
+fifty_mm = [i[0] for i in rainfall if i[1] < 50]
+
+print("Months that received less than 50mm of rainfall in the UK in 1910: ", fifty_mm)
 
 # (3) Now do (1) and (2) using conventional loops (you can choose to do 
 # this before 1 and 2 !). 
@@ -34,7 +38,16 @@ for i in rainfall:
     if i[1] > 100:
         hundred_mm.append(i)
 
-print("Months with more than 100mm of rainfall: ", hundred_mm)
+print("Months and rainfall amounts where rainfall has exceeded 100mm in the UK in 1910: ", hundred_mm)
+
+## (2) using conventional for loops
+
+fifty_mm = []
+for i in rainfall:
+    if i[1] < 50:
+        fifty_mm.append(i[0])
+
+print("Months that received less than 50mm of rainfall in the UK in 1910: ", fifty_mm)
 
 # A good example output is:
 #
