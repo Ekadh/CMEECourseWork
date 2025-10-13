@@ -13,11 +13,14 @@ latin_names = [i[0] for i in birds]
 common_names = [i[1] for i in birds]
 body_mass = [i[2] for i in birds]
 
+print("Latin names: ", latin_names)
+print("Common names: ", common_names)
+print("Body mass: ", body_mass)
 
 # (2) Now do the same using conventional loops (you can choose to do this 
 # before 1 !). 
 
-# It can all just be done in one for loop, so I've just included the one, but they can all be separate and acheive the same function as well.
+## It can all just be done in one for loop, so I've just included the one, but they can all be separate and acheive the same function as well.
 
 latin_names = []
 common_names = []
@@ -28,7 +31,9 @@ for i in birds:
     body_mass.append(i[2])
 
 
-
+print("Latin names: ", latin_names)
+print("Common names: ", common_names)
+print("Body mass: ", body_mass)
 
 # A nice example out out is:
 # Step #1:
