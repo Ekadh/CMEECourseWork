@@ -19,21 +19,21 @@ taxa = [ ('Myotis lucifugus','Chiroptera'),
 # OR, 
 # 'Chiroptera': {'Myotis  lucifugus'} ... etc
 
+#### Your solution here #### 
+
 taxa_dic = {}
-order_set = set()
-species_set = set()
-for i in taxa:
-        order_set.add(i[1])
-        species_set.add(i[0])
+for mammal, order in taxa:
+    if order not in taxa_dic:
+        taxa_dic[order] = set()
+    taxa_dic[order].add(mammal)
 
-taxa_dic.add{order_set, species_set}
-
-
-
-
-
+print(taxa_dic)
+    
 
 
 # Now write a list comprehension that does the same (including the printing after the dictionary has been created)  
  
 #### Your solution here #### 
+taxa_dic = {}
+taxa_dic = {order: {mammal for mammal, o in taxa if o == order} for mammal, order in taxa}
+
