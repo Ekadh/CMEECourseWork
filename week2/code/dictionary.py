@@ -34,6 +34,5 @@ print(taxa_dic)
 # Now write a list comprehension that does the same (including the printing after the dictionary has been created)  
  
 #### Your solution here #### 
-taxa_dic = {}
-taxa_dic = {order: {mammal for mammal, o in taxa if o == order} for mammal, order in taxa}
+print(taxa_dic := {order: {mammal for mammal, o in taxa if o == order} for _, order in taxa})
 
