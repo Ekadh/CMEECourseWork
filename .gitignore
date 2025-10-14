@@ -13,4 +13,6 @@
 */sandbox/*
 */results/*
 .DS_Store
-__pycache__
+*/__pycache__
+*/.RData
+*/.Rhistory
