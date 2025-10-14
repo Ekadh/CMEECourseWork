@@ -67,8 +67,6 @@ def main(argv):
     print(foo_6(6))
     return 0
 
-
-
 if __name__ == "__main__":
     status = main(sys.argv) ## makes sure that the def(main) function is called from command line
     sys.exit(status)
