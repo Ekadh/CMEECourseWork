@@ -19,3 +19,9 @@ z = 0
 while z < 100:
     z = z + 1
     print(z)
+
+for i in range(1, 6):
+    print(i)
+    if i == 3:
+        break
+
