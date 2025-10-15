@@ -4,22 +4,6 @@ __author__ = 'Ekadh (er925@ic.ac.uk)'
 __version__ = '0.0.1'
 
 import sys
-import csv
-
-seqs = []
-current_seq = ""
-
-with open('../data/testfasta.csv', 'r') as f:
-    for line in f:
-        line = line.strip()
-        if line.startswith(">"):
-            if current_seq:
-                seqs.append(current_seq)
-                current_seq = ""
-            continue
-        current_seq = current_seq + line
-    if current_seq:
-        seqs.append(current_seq)
 
 # A function that computes a score by returning the number of matches starting
 # from arbitrary startpoint (chosen by user)
@@ -51,8 +35,23 @@ def calculate_score(s1, s2, l1, l2, startpoint):
 #import ipdb; ipdb.set_trace()
 
 def main(argv):
-    seq2 = "ATCGCCGGATTACGGG"
-    seq1 = "CAATTCGGAT"
+    seqs = []
+    current_seq = ""
+
+    with open('../data/testfasta.fasta', 'r') as f:
+        for line in f:
+            line = line.strip()
+            if line.startswith(">"):
+                if current_seq:
+                    seqs.append(current_seq)
+                    current_seq = ""
+                continue
+            current_seq = current_seq + line
+        if current_seq:
+            seqs.append(current_seq)
+
+    seq2 = str(seqs[1])
+    seq1 = str(seqs[0])
     l1 = len(seq1)
     l2 = len(seq2)
     if l1 >= l2:
@@ -63,8 +62,6 @@ def main(argv):
         s2 = seq1
         l1, l2 = l2, l1 # swap the two lengths
     
-    print(calculate_score(s1, s2, l1, l2, 0))
-
     my_best_align = None
     my_best_score = -1
 
@@ -73,8 +70,11 @@ def main(argv):
         if z > my_best_score:
             my_best_align = "." * i + s2 # think about what this is doing!
             my_best_score = z 
-    print(my_best_align)
-    print(s1)
+
+    with open("../results/align_output.txt", 'w') as out:
+        out.write(f"Best alignment: {my_best_align}\n")
+        out.write(f"{s1}\n")
+        out.write(f"Best number of matches: {my_best_score}")
     print("Best score:", my_best_score)
     return 0
 
