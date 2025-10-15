@@ -32,8 +32,6 @@ def calculate_score(s1, s2, l1, l2, startpoint):
 # calculate_score(s1, s2, l1, l2, 1)
 # calculate_score(s1, s2, l1, l2, 5)
 
-#import ipdb; ipdb.set_trace()
-
 def main(argv):
     seqs = []
     current_seq = ""
@@ -72,12 +70,12 @@ def main(argv):
             my_best_score = z 
 
     with open("../results/align_output.txt", 'w') as out:
-        out.write(f"Best alignment: {my_best_align}\n")
+        out.write(f"Best alignment:\n{my_best_align}\n")
         out.write(f"{s1}\n")
         out.write(f"Best number of matches: {my_best_score}")
     print("Best score:", my_best_score)
     return 0
 
 if __name__ == "__main__":
-    status = main(sys.argv) ## makes sure that the def(main) function is called from command line
+    status = main(sys.argv)
     sys.exit(status)
