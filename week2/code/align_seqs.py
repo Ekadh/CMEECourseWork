@@ -1,13 +1,28 @@
 #!/usr/bin/env python3
-""" Align sequences in .fasta format """
+""" Aligns sequences in .fasta format """
 __author__ = 'Ekadh (er925@ic.ac.uk)'
 __version__ = '0.0.1'
 
 import sys
+import csv
+
+seqs = []
+current_seq = ""
+
+with open('../data/testfasta.csv', 'r') as f:
+    for line in f:
+        line = line.strip()
+        if line.startswith(">"):
+            if current_seq:
+                seqs.append(current_seq)
+                current_seq = ""
+            continue
+        current_seq = current_seq + line
 
 # A function that computes a score by returning the number of matches starting
 # from arbitrary startpoint (chosen by user)
 def calculate_score(s1, s2, l1, l2, startpoint):
+    """ Starts from a startpoint and calculates matches """
     matched = "" # to hold string displaying alignements
     score = 0
     for i in range(l2):
