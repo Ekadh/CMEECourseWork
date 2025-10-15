@@ -9,7 +9,6 @@ def foo_1(x=1):
     """ Raising a number to the power of 0.5 """
     return x ** 0.5
 
-foo_1(4)
 
 def foo_2(x=10,y=11):
     """Finds the larger number out of 2 inputs"""
@@ -17,7 +16,6 @@ def foo_2(x=10,y=11):
         return x
     return y
 
-foo_2(4, 5)
 
 def foo_3(x=7,y=8,z=2):
     """Puts three input numbers into ascending order"""
@@ -29,7 +27,6 @@ def foo_3(x=7,y=8,z=2):
         y, z = z, y
     return [x, y, z]
 
-foo_3(7, 8, 2)
 
 def foo_4(x=6):
     """Factorial calculator #1"""
@@ -38,7 +35,6 @@ def foo_4(x=6):
         result = result * i
     return result
 
-foo_4(6)
 
 def foo_5(x=5):
     """Factorial calculator #2"""
@@ -46,7 +42,6 @@ def foo_5(x=5):
         return 1
     return x * foo_5(x - 1) ## Recursive function to calculate factorials
 
-foo_5(5)
 
 def foo_6(x=5):
     """Factorial calculator #3"""
@@ -56,7 +51,6 @@ def foo_6(x=5):
         x = x-1
     return facto ## Much better factorial code
 
-foo_6(5)
 
 def main(argv):
     print(foo_1(12))
