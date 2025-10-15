@@ -18,6 +18,8 @@ with open('../data/testfasta.csv', 'r') as f:
                 current_seq = ""
             continue
         current_seq = current_seq + line
+    if current_seq:
+        seqs.append(current_seq)
 
 # A function that computes a score by returning the number of matches starting
 # from arbitrary startpoint (chosen by user)
