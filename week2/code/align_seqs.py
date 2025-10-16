@@ -5,6 +5,32 @@ __version__ = '0.0.1'
 
 import sys
 
+def import_file_sequences():
+    with open('../data/testfasta.fasta', 'r') as f:
+        for line in f:
+            line = line.strip()
+            if line.startswith(">"):
+                if current_seq:
+                    seqs.append(current_seq)
+                    current_seq = ""
+                continue
+            current_seq = current_seq + line
+        if current_seq:
+            seqs.append(current_seq)
+
+    seq2 = str(seqs[1])
+    seq1 = str(seqs[0])
+    l1 = len(seq1)
+    l2 = len(seq2)
+    if l1 >= l2:
+        s1 = seq1
+        s2 = seq2
+    else:
+        s1 = seq2
+        s2 = seq1
+        l1, l2 = l2, l1 # swap the two lengths
+    return(s1, s2, l1, l2)
+
 # A function that computes a score by returning the number of matches starting
 # from arbitrary startpoint (chosen by user)
 def calculate_score(s1, s2, l1, l2, startpoint):
@@ -35,30 +61,7 @@ def calculate_score(s1, s2, l1, l2, startpoint):
 def main(argv):
     seqs = []
     current_seq = ""
-
-    with open('../data/testfasta.fasta', 'r') as f:
-        for line in f:
-            line = line.strip()
-            if line.startswith(">"):
-                if current_seq:
-                    seqs.append(current_seq)
-                    current_seq = ""
-                continue
-            current_seq = current_seq + line
-        if current_seq:
-            seqs.append(current_seq)
-
-    seq2 = str(seqs[1])
-    seq1 = str(seqs[0])
-    l1 = len(seq1)
-    l2 = len(seq2)
-    if l1 >= l2:
-        s1 = seq1
-        s2 = seq2
-    else:
-        s1 = seq2
-        s2 = seq1
-        l1, l2 = l2, l1 # swap the two lengths
+    import_file_sequences()
     
     my_best_align = None
     my_best_score = -1

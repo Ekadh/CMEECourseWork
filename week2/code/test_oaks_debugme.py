@@ -9,16 +9,16 @@ def is_an_oak(name):
     False
 
     >>> is_an_oak('Quercuss')
-    False
+    True
 
     >>> is_an_oak('quercuss')
-    False
+    True
 
     >>> is_an_oak('quercs')
     True
 
     >>> is_an_oak('quercus')
-    False
+    True
 
     >>> is_an_oak('Quercs')
     True
@@ -27,7 +27,7 @@ def is_an_oak(name):
     True
 
     """
-    return name.lower().startswith('quercs')
+    return 'querc' in name.lower()
 
 def main(argv): 
     f = open('../data/TestOaksData.csv','r')

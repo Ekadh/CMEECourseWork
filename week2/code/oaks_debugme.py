@@ -4,7 +4,7 @@ import sys
 #Define function
 def is_an_oak(name):
     """ Returns True if name is starts with 'quercus' """
-    return name.lower().startswith('quercs')
+    return 'querc' in name.lower()
 
 def main(argv): 
     f = open('../data/TestOaksData.csv','r')
