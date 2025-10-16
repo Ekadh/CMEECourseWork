@@ -6,6 +6,9 @@ __version__ = '0.0.1'
 import sys
 
 def import_file_sequences():
+    """ Import the sequence file. store sequences in a list and calculate lengths """
+    seqs = []
+    current_seq = ""
     with open('../data/testfasta.fasta', 'r') as f:
         for line in f:
             line = line.strip()
@@ -59,20 +62,20 @@ def calculate_score(s1, s2, l1, l2, startpoint):
 # calculate_score(s1, s2, l1, l2, 5)
 
 def main(argv):
-    seqs = []
-    current_seq = ""
-    import_file_sequences()
+    s1, s2, l1, l2 = import_file_sequences()
     
     my_best_align = None
     my_best_score = -1
 
     for i in range(l1): # Note that you just take the last alignment with the highest score
+        """ Aligns sequences by adding dots to change startpoint and counting matches """
         z = calculate_score(s1, s2, l1, l2, i)
         if z > my_best_score:
             my_best_align = "." * i + s2 # think about what this is doing!
             my_best_score = z 
 
     with open("../results/align_output.txt", 'w') as out:
+        """ Writes output to a text file, check results folder """
         out.write(f"Best alignment:\n{my_best_align}\n")
         out.write(f"{s1}\n")
         out.write(f"Best number of matches: {my_best_score}")
