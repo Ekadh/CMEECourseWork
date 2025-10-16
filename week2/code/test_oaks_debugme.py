@@ -6,10 +6,25 @@ import doctest
 def is_an_oak(name):
     """Find whether a species is an oak or not
     >>> is_an_oak('Fagus sylvatica')
-    'False'
+    False
 
     >>> is_an_oak('Quercuss')
-    'False'
+    False
+
+    >>> is_an_oak('quercuss')
+    False
+
+    >>> is_an_oak('quercs')
+    True
+
+    >>> is_an_oak('quercus')
+    False
+
+    >>> is_an_oak('Quercs')
+    True
+
+    >>> is_an_oak('Quercs rober')
+    True
 
     """
     return name.lower().startswith('quercs')
