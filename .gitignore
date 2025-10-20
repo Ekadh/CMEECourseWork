@@ -1,5 +1,5 @@
 # Just gonna ignore all files by default (whitelist method)
-*.*
+# *.* # NOT RECOMMENDED IN THIS REPO AS THE STRUCTURE MAY CHANGE DUE TO FEEDBACK ETC
 
 # Allow code, data and .sh scripts
 !*.sh
