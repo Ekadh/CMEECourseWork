@@ -11,10 +11,16 @@
 
 # Ignore sandbox and other temp files
 */sandbox/*
+*/sandbox/
 .DS_Store
 */__pycache__/
 .RData
+*/.RData
+*/.Rhistory
 .Rhistory
 *.tmp
 *~
 *.yaml
+myenv/*
+.
+..

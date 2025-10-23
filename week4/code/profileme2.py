@@ -1,5 +1,7 @@
+import numpy as np
+
 def my_squares(iters):
-    out = [i ** 2 for i in range(iters)]
+    out = np.array([i ** 2 for i in range(iters)])
     return out
 
 def my_join(iters, string):

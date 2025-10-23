@@ -1,7 +1,7 @@
 ################################################################
 ################## Wrangling the Pound Hill Dataset ############
 ################################################################
-
+library(tidyverse)
 ############# Load the dataset ###############
 # header = false because the raw data don't have real headers
 MyData <- as.matrix(read.csv("../data/PoundHillData.csv", header = FALSE))
@@ -19,7 +19,6 @@ fix(MyMetaData)
 ############# Transpose ###############
 # To get those species into columns and treatments into rows 
 MyData <- t(MyData) 
-head(MyData)
 dim(MyData)
 
 ############# Replace species absences with zeros ###############
@@ -27,7 +26,7 @@ MyData[MyData == ""] = 0
 
 ############# Convert raw matrix to data frame ###############
 
-TempData <- as.data.frame(MyData[-1,],stringsAsFactors = F) #stringsAsFactors = F is important!
+TempData <- as.data.frame(MyData[-1,],stringsAsFactors = F) #stringsAsFactors = F is important!, basically the -1 here converts the matrix to dataframe such that the column names V1 etc are removed
 colnames(TempData) <- MyData[1,] # assign column names from original data
 
 ############# Convert from wide to long format  ###############
@@ -48,3 +47,9 @@ head(MyWrangledData)
 dim(MyWrangledData)
 
 ############# Exploring the data (extend the script below)  ###############
+
+# Practice data manipulations in tidyverse
+
+MyWrangledData %>%
+    group_by(Species) %>%
+        summarise(avg = mean(Count))

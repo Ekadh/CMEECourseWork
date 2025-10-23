@@ -1,3 +1,5 @@
+import numpy as np
+
 r = 1.
 a = 0.1
 z = 1.5
