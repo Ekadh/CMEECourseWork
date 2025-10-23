@@ -1,0 +1,417 @@
+======================================================================
+AUTOMATED FEEDBACK LOG
+======================================================================
+
+HOW TO READ THIS FEEDBACK:
+--------------------------
+1. This log contains detailed feedback on your code execution
+2. Each script is tested and results are shown with output and errors
+3. IMPORTANT: Read all the way to the END for a summary and debugging guidance
+4. The summary at the end will help you understand and fix any issues
+5. Scripts are run in a headless environment (no GUI applications)
+
+======================================================================
+
+Starting testing for Ekadh Ranganathan
+
+Processing week 1
+
+Your current Git repo size is about 3.45 MiB on disk
+
+Found directories: .git, week1, week2, Feedback, week3
+Found files: .gitignore, README.md
+
+Processing week 1: week1
+
+Found 9 code files to test.
+
+Note: Expected file checking not performed (no FileList provided).
+Expected file checking will only be performed during final assessment.
+
+======================================================================
+Script: csvtospace.sh
+
+Contents:
+
+**********
+#!/bin/bash
+if [ $# -lt 2 ]
+then
+    echo "Please input the csv file and the space-delimited output filename"
+    exit 1
+fi
+
+if [ ! -f "$1" ]
+then
+    echo "File not found"
+    exit 2
+fi
+
+if [[ "$1" != *.csv ]]; then
+    echo "Input file must be a .csv file"
+    exit 3
+fi
+echo "Creating a space-delimited version of $1 .."
+cat "$1" | tr -s "," " " > "../results/${2}.txt"
+echo "Done"
+exit 0
+**********
+
+Output (first 500 chars):
+
+**********
+Please input the csv file and the space-delimited output filename
+
+**********
+No errors.
+======================================================================
+Script: myexamplescript.sh
+
+Contents:
+
+**********
+#!/bin/sh
+
+MSG1="Hello"
+MSG2=$USER
+echo "$MSG1 $MSG2"
+echo "Hello $USER"
+echo
+
+**********
+
+Output (first 500 chars):
+
+**********
+Hello mhasoba
+Hello mhasoba
+
+
+**********
+No errors.
+======================================================================
+Script: countlines.sh
+
+Contents:
+
+**********
+#!/bin/bash
+
+if [ $# -lt 1 ]
+then
+    echo "Please input a file"
+    exit 1
+fi
+
+NumLines='wc -l <$1'
+echo "The file $1 has $NumLines lines"
+echo
+
+**********
+
+Output (first 500 chars):
+
+**********
+Please input a file
+
+**********
+No errors.
+======================================================================
+Script: concatenatetwofiles.sh
+
+Contents:
+
+**********
+#!/bin/bash
+# Check results folder for the output
+if [ $# -lt 3 ]
+then
+    echo "Please input the two files to be concatenated and the name of the output file (check the results folder afterwards)"
+    exit 1
+fi
+if [ ! -f "$1" ] || [ ! -f "$2" ]
+then 
+    echo "At least one of the files does not exist"
+    exit 2
+fi
+cat $1 > "../results/$(basename "$3")"
+cat $2 >> "../results/$(basename "$3")"
+echo "The merged file from $(basename "$1") and $(basename "$2") have been combined into $(basename "$3"), here is the output:"
+cat ../results/$3
+exit 0
+
+**********
+
+Output (first 500 chars):
+
+**********
+Please input the two files to be concatenated and the name of the output file (check the results folder afterwards)
+
+**********
+No errors.
+======================================================================
+Script: tiff2png.sh
+
+Contents:
+
+**********
+#!/bin/bash
+
+shopt -s nullglob
+tifs=(../data/*.tif)
+if [ ${#tifs[@]} -eq 0 ]; then
+    echo "No tifs found in this folder"
+    exit 1
+fi
+
+for file in "${tifs[@]}";
+    do
+        echo "Converting $file"
+        convert "$file" "../results/$(basename "$file" .tif).png"
+done
+
+exit 0
+    
+**********
+
+Output (first 500 chars):
+
+**********
+Converting ../data/NCBS_map.tif
+
+**********
+Errors:
+**********
+convert-im6.q16: Unknown field with tag 33550 (0x830e) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/905.
+convert-im6.q16: Unknown field with tag 33922 (0x8482) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/905.
+convert-im6.q16: Unknown field with tag 34735 (0x87af) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/905.
+convert-im6.q16: Unknown field with tag 34736 (0x87b0) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/905.
+convert-im6.q16: Unknown field with tag 34737 (0x87b1) encountered. `TIFFReadDirectory' @ warning/tiff.c/TIFFWarnings/905.
+
+**********
+======================================================================
+Script: boilerplate.sh
+
+Contents:
+
+**********
+#!/bin/sh
+# Author: Ekadh er925@ic.ac.uk
+# Script: boilerplate.sh
+# Desc: A simple boilerplate for shell scripts
+# Arguments: 0
+# Date: Oct 2025
+
+echo -e "\nThis is a shell script! \n"
+# The -e doesn't work as intended on Mac so it just shows up in the output, can use printf instead if needed
+#exit
+
+**********
+
+Output (first 500 chars):
+
+**********
+
+This is a shell script! 
+
+
+**********
+No errors.
+======================================================================
+Script: tabtocsv.sh
+
+Contents:
+
+**********
+#!/bin/sh
+# Author: Ekadh er925@ic.ac.uk
+# Script: tabtocsv.sh
+# Desc: Converts a tab-delimited file to a comma-separated file
+# 
+# Saves the output into a .csv file
+# Arguments: 1 -> tab-delimited file
+# Date: Oct 2025
+if [ $# -lt 1 ]
+then
+    echo "Please input a file"
+    exit 1
+fi
+
+if [ ! -f "$1" ]
+then
+    echo "File not found"
+    exit 2
+fi
+
+if [ "$(grep -o $'\t' "$1" | wc -l)" -eq 0 ] 
+then
+    echo "Input file must be a tab-delimited file"
+    exit 3
+fi
+
+echo "Creating a csv version of $1 .."
+cat $1 | tr -s "\t" "," >> "../results/$(basename "$1" .txt).csv"
+echo "Done, check your results folder"
+exit 0
+
+**********
+
+Output (first 500 chars):
+
+**********
+Please input a file
+
+**********
+No errors.
+======================================================================
+Script: compilelatex.sh
+
+Contents:
+
+**********
+#!/bin/bash
+pdflatex $1.tex
+bibtex $1
+pdflatex $1.tex
+pdflatex $1.tex
+evince $1.pdf &
+
+rm *.aux
+rm *.log
+rm *.bbl
+rm *.blg
+
+**********
+
+Output (first 500 chars):
+
+**********
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/usr/share/texlive/texmf-dist/tex/latex/tools/.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+File ignored)
+*
+! Emergency stop.
+<*> 
+    
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on .log.
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex
+**********
+Errors:
+**********
+bibtex: Need exactly one file argument.
+Try `bibtex --help' for more information.
+rm: cannot remove '*.aux': No such file or directory
+rm: cannot remove '*.log': No such file or directory
+rm: cannot remove '*.bbl': No such file or directory
+rm: cannot remove '*.blg': No such file or directory
+Cannot parse arguments: Cannot open display: 
+
+**********
+======================================================================
+Script: variables.sh
+
+Contents:
+
+**********
+#!/bin/sh
+
+##Use of variables
+
+# Special variables
+
+echo "This script was called with $# arguments"
+echo "The name of this script is $0"
+echo "The first argument is $1"
+echo "The second argument is $2"
+echo "The arguments are $@"
+
+# Assigned variables
+MY_VAR="Ekadh"
+echo 'the current value of my variable is:' $MY_VAR
+echo
+echo 'Please enter a new string'
+read MY_VAR
+echo
+echo 'the new value of my variable is:' $MY_VAR
+echo
+
+## Assigned variables: Reading values from user input
+echo 'Enter two numbers separated by a space'
+read VAR1 VAR2
+echo
+echo 'you entered' $VAR1 'and' $VAR2 '; Their sum is:'
+
+## Assigned variables; Command substitution
+MY_SUM=$(expr $VAR1 + $VAR2)
+echo $MY_SUM
+
+#exit
+#Note: The echo command is used to print text to the terminal. The read command is used to add new lines to the code if needed.
+#Note: You can run the bash variables.sh command in terminal with the arguments following the filename: bash variables.sh 3 six
+
+**********
+
+Output (first 500 chars):
+
+**********
+This script was called with 0 arguments
+The name of this script is variables.sh
+The first argument is 
+The second argument is 
+The arguments are 
+the current value of my variable is: Ekadh
+
+Please enter a new string
+
+the new value of my variable is:
+
+Enter two numbers separated by a space
+
+you entered and ; Their sum is:
+
+
+**********
+Errors:
+**********
+expr: syntax error: missing argument after ‘+’
+
+**********
+
+======================================================================
+FEEDBACK SUMMARY
+======================================================================
+
+Scripts tested: 9
+Scripts successful: 6
+Scripts with errors: 3
+Warnings/Notes: 3
+
+IMPORTANT DEBUGGING GUIDANCE:
+------------------------------
+
+Please review all warnings and errors, and your directory structure based on the above log.
+
+Ask yourself: Why did I not get these warnings or errors on my machine when I tested my code?
+Common reasons for environment differences:
+
+• File paths: Your local machine may have different directory structures
+• Dependencies: Missing packages or different versions
+• File permissions: Scripts may not be executable on the testing server
+• Case sensitivity: Linux systems are case-sensitive (your laptop may not be)
+• Working directory: Scripts may assume they run from a specific location
+• Input files: Required data files may be missing or in wrong locations
+
+Debugging steps:
+1. Test your code in a clean environment (fresh directory)
+2. Check all file paths are relative and correct
+3. Verify all required files are present and properly named
+4. Test on a case-sensitive system if possible
+5. Run your scripts from different directories to check robustness
+
+Fix these issues and test again. Good debugging skills are essential for scientific computing!
+
