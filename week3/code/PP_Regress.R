@@ -8,5 +8,24 @@ p <- p + geom_point(shape = I(3)) + geom_smooth(method = "lm", fullrange = TRUE)
 # Setting up facet wrap, labs and theme
 p <- p + facet_wrap(Type.of.feeding.interaction ~., ncol = 1, strip.position = "right") +
   labs(x = "Prey mass in grams", y = "Predator mass in grams") +
-  theme(legend.position = "bottom")
+  theme(legend.position = "bottom",
+        legend.direction = "horizontal",  # try to make legend in one line (didn't work)
+        legend.box = "horizontal",
+        strip.placement = "outside",
+        plot.margin = margin(10, 40, 10, 10)
+  )
 p
+
+regs <- ecol_archives %>%
+    group_by(Type.of.feeding.interaction, Predator.lifestage) %>%
+    summarise({
+        model <- lm(log(Predator.mass) ~ log(Prey.mass), data = cur_data())
+        fpstats <- summary(model)
+        tibble(
+            slope = coef(model)[2]
+            intercept = coef(model)[1]
+            R = sqrt(fpstats$r.squared)
+            F_stat = fpstats$fstatistic[1]
+            p_value = pf(stats$fstatistic[1], stats$fstatistic[2], stats$fstatistic[3], lower.tail = FALSE)
+        )
+    })
