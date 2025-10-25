@@ -21,11 +21,7 @@ regs <- ecol_archives %>%
     summarise({
         model <- lm(log(Predator.mass) ~ log(Prey.mass), data = cur_data())
         fpstats <- summary(model)
-        tibble(
-            slope = coef(model)[2]
-            intercept = coef(model)[1]
-            R = sqrt(fpstats$r.squared)
-            F_stat = fpstats$fstatistic[1]
-            p_value = pf(stats$fstatistic[1], stats$fstatistic[2], stats$fstatistic[3], lower.tail = FALSE)
-        )
+        tibble(slope = coef(model)[2], intercept = coef(model)[1], R = sqrt(fpstats$r.squared), F_stat = fpstats$fstatistic[1])
     })
+
+write.csv(regs, "../results/PP_Regress_Results.csv", row.names = FALSE)
