@@ -1,3 +1,7 @@
+##R_conditionals.R
+##Author: Ekadh Ranganathan
+##Date: 31st October 2025
+
 # Conditional function 1
 
 is.even <- function(n = 2) {

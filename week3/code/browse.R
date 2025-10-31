@@ -1,3 +1,7 @@
+##browse.R
+##Author: Ekadh Ranganathan
+##Date: 31st October 2025
+
 Exponential <- function(N0 = 1, r = 1, generations = 10) {
 # Exponential growth simulation
 

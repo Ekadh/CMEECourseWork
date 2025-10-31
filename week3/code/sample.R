@@ -1,3 +1,7 @@
+##sample.R
+##Author: Ekadh Ranganathan
+##Date: 31st October 2025
+
 ## Some functions to learn sample, lapply and sapply ##
 
 ## A function that samples a population and returns the mean of the sample ##

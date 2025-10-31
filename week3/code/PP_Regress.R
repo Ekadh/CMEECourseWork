@@ -1,6 +1,15 @@
+##PP_Regress.R
+##Author: Ekadh Ranganathan
+##Date: 31st October 2025
+
 library(tidyverse)
 # Loading csv
 ecol_archives <- read.csv("../data/EcolArchives-E089-51-D1.csv")
+
+#Conversion
+ecol_archives$Prey.mass[ecol_archives$Prey.mass.unit == "mg"] <- ecol_archives$Prey.mass[ecol_archives$Prey.mass.unit == "mg"] / 1000
+ecol_archives$Prey.mass.unit[ecol_archives$Prey.mass.unit == "mg"] <- "g"
+
 # Setting basic plot aesthetics
 p <- ggplot(ecol_archives,
             aes(Prey.mass, Predator.mass,

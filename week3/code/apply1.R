@@ -1,3 +1,7 @@
+##apply1.R
+##Author: Ekadh Ranganathan
+##Date: 31st October 2025
+
 M <- matrix(rnorm(100), 10, 10)
 
 RowMeans <- apply(M, 1, mean)

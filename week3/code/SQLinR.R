@@ -1,3 +1,7 @@
+##SQLinR.R
+##Author: Ekadh Ranganathan
+##Date: 31st October 2025
+
 #install the sqlite package
 install.packages('sqldf')
 

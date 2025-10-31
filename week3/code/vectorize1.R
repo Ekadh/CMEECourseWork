@@ -1,3 +1,7 @@
+##vectorize1.R
+##Author: Ekadh Ranganathan
+##Date: 31st October 2025
+
 M <- matrix(runif(1000000), 1000, 1000)
 
 SumAllElements <- function(M) {

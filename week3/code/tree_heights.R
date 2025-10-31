@@ -1,3 +1,6 @@
+##tree_heights.R
+##Author: Ekadh Ranganathan
+##Date: 31st October 2025
 # This function calculates heights of trees given distance of each tree 
 # from its base and angle to its top, using  the trigonometric formula 
 #

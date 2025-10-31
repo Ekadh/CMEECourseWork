@@ -1,3 +1,7 @@
+##boilerplate.R
+##Author: Ekadh Ranganathan
+##Date: 31st October 2025
+
 my_function <- function(Arg1, Arg2) {
 
     print(paste("Argument", as.character(Arg1), "is a", class(Arg1)))

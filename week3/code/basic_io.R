@@ -1,3 +1,6 @@
+##basic_io.R
+##Author: Ekadh Ranganathan
+##Date: 31st October 2025
 # A simple script to show R inputs and outputs
 
 mydata <- read.csv("../data/trees.csv", header = TRUE)

@@ -1,3 +1,7 @@
+##Florida.R
+##Author: Ekadh Ranganathan
+##Date: 31st October 2025
+
 load("../data/KeyWestAnnualMeanTemperature.RData")
 #head(ats)
 #class(ats)
