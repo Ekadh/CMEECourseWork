@@ -6,7 +6,7 @@ p <- ggplot(ecol_archives,
             aes(Prey.mass, Predator.mass,
                 color = Predator.lifestage))
 # Setting points and lm lines (plot raw masses but display axes on a log scale so labels are positive)
-p <- p + geom_point(shape = I(3)) + geom_smooth(method = "lm", fullrange = TRUE) +
+p <- p + geom_point(shape = I(3)) + geom_smooth(method = "lm", fullrange = TRUE, se = TRUE) +
   scale_x_log10() + scale_y_log10()
 # Setting up facet wrap, labs and theme
 p <- p + facet_wrap(Type.of.feeding.interaction ~., ncol = 1, strip.position = "right") +
