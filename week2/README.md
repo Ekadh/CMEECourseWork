@@ -43,28 +43,221 @@ Below is the structure of the folder and brief descriptions of all included scri
 
 ## Scripts
 
-1. **align_seqs.py** — A script that takes one file with DNA sequences as input and outputs the best alignment of those sequences.  
-2. **basic_csv.py** — A script used to read and write .csv files using the with open() command.  
-3. **basic_io1.py** — Basic input-output script using open() command.  
-4. **basic_io2.py** — Basic input-output script using open() command.  
-5. **basic_io3.py** — Basic input-output script using open() command.  
-6. **boilerplate.py** — First python program script outputting a line when imported and run.  
-7. **cfexercises1.py** — A python program script with many functions that perform operations on input numbers.  
-8. **cfexercises2.py** — A python program script with many functions on character strings in particular.  
-9. **control_flow.py** — A python program with functions to illustrate control-flow statements.  
-10. **debugme.py** — A buggy function that has a ZeroDivisionError.  
-11. **dictionary.py** — An exercise to create a dictionary containing order names as keys and all underlying species as values.  
-12. **lc1.py** — An exercise to use list comprehensions to store bird taxa.  
-13. **lc2.py** — An exercise to use list comprehensions to append months to a list of rainfall data.  
-14. **loops.py** — A script to understand for and while loop usage in python.  
-15. **myexamplescript.py** — A script containing my first function.  
-16. **oaks.py** — A script that uses nested functions to find and store oaks species out of a list of taxa.  
-17. **oaks_debugme.py** — The same finding oaks script but with a few bugs.  
-18. **sysargv.py** — A script to illustrate how python programs work.  
-19. **test_control_flow.py** — A script that uses doctests to check the outputs of the first function in control_flow.py.  
-20. **test_oaks_debugme.py** — A doctest for the missing oaks problem.  
-21. **tuple.py** — An exercise to print the contents of a tuple of tuples.  
-22. **using_name.py** — A script to understand the function of name == main in python programs.  
+1. **align_seqs.py**
+
+Aligns two DNA sequences from a FASTA file and outputs the best alignment.
+
+Purpose:
+Find the best alignment between two sequences by sliding and scoring matches.
+
+Usage:
+
+python3 align_seqs.py
+
+
+Output:
+Alignment written to ../results/align_output.txt.
+
+2. **basic_csv.py**
+
+Reads a CSV file and writes selected columns to a new CSV.
+
+Purpose:
+Practice reading and writing CSV files using csv.reader and csv.writer.
+
+Usage:
+
+python3 basic_csv.py
+
+3–5. **basic_io1.py, basic_io2.py, basic_io3.py**
+
+Scripts demonstrating basic file reading, writing, and pickling.
+
+Purpose:
+
+basic_io1.py: open and read text files
+
+basic_io2.py: write lists to a text file
+
+basic_io3.py: store/load Python objects with pickle
+
+Usage:
+
+python3 basic_io1.py
+python3 basic_io2.py
+python3 basic_io3.py
+
+6. **boilerplate.py**
+
+Simple example Python program showing structure of main() and __name__ == "__main__".
+
+Purpose:
+Print a message and demonstrate program entry points.
+
+Usage:
+
+python3 boilerplate.py
+
+7. **cfexercises1.py**
+
+Collection of functions for mathematical operations and control flow exercises.
+
+Purpose:
+Practise writing functions involving square roots, comparisons, sorting, and factorials.
+
+Usage:
+
+python3 cfexercises1.py
+
+8. **cfexercises2.py**
+
+Exercises demonstrating loops and conditional execution.
+
+Purpose:
+Explore for-loops, while-loops, and break statements.
+
+Usage:
+
+python3 cfexercises2.py
+
+9. **control_flow.py**
+
+Illustrates conditional logic with functions for parity, divisors, and prime detection.
+
+Purpose:
+Understand branching logic and prime-number calculations.
+
+Usage:
+
+python3 control_flow.py
+
+10. **debugme.py**
+
+Buggy script containing a ZeroDivisionError.
+
+Purpose:
+Practise debugging Python functions.
+
+Usage:
+
+python3 debugme.py
+
+11. **dictionary.py**
+
+Creates a dictionary mapping mammal orders to species using loops and a comprehension.
+
+Purpose:
+Practise building dictionaries and using set operations.
+
+Usage:
+
+python3 dictionary.py
+
+12. **lc1.py**
+
+List comprehension exercises using tuples of bird data.
+
+Purpose:
+Extract Latin names, common names, and body mass values using list comprehensions.
+
+Usage:
+
+python3 lc1.py
+
+13. **lc2.py**
+
+More list comprehension exercises using rainfall data.
+
+Purpose:
+Filter data using conditions (>100 mm rainfall, <50 mm rainfall).
+
+Usage:
+
+python3 lc2.py
+
+14. **loops.py**
+
+Simple examples of for and while loops.
+
+Purpose:
+Understand iteration over ranges, lists, and while-loops with break statements.
+
+Usage:
+
+python3 loops.py
+
+15. **myexamplescript.py**
+
+Contains a function that squares a number.
+
+Usage:
+
+python3 myexamplescript.py
+
+16. **oaks.py**
+
+Finds oak species from a list using functions and list comprehensions.
+
+Purpose:
+Filter species names beginning with Quercus.
+
+Usage:
+
+python3 oaks.py
+
+17. **oaks_debugme.py**
+
+Buggy version of the oak-filtering script.
+
+Purpose:
+Debugging and CSV reading/writing practice.
+
+Usage:
+
+python3 oaks_debugme.py
+
+18. **sysargv.py**
+
+Demonstrates the use of sys.argv for passing command-line arguments.
+
+Usage:
+
+python3 sysargv.py arg1 arg2
+
+19. **test_control_flow.py**
+
+Uses doctests to validate functions from control_flow.py.
+
+Purpose:
+Learn how to write and run doctests.
+
+Run doctests:
+
+python3 -m doctest -v test_control_flow.py
+
+20. **test_oaks_debugme.py**
+
+Doctest script for the oak-identification function in oaks_debugme.py.
+
+Usage:
+
+python3 -m doctest -v test_oaks_debugme.py
+
+21. **tuple.py**
+
+Prints the contents of a tuple of bird tuples.
+
+Usage:
+
+python3 tuple.py
+
+22. **using_name.py**
+
+Demonstrates the behaviour of __name__ depending on whether the script is run or imported.
+
+Usage:
+
+python3 using_name.py
 
 ---
 
