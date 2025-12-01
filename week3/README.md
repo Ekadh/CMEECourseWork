@@ -6,7 +6,7 @@ Below is the structure of the folder and brief descriptions of all included scri
 ---
 
 ## Directory Structure
-
+```
 ├── week3  
 │ ├── code  
 │ │ ├── DataWrang.R  
@@ -35,7 +35,7 @@ Below is the structure of the folder and brief descriptions of all included scri
 │ │ ├── PoundHillMetaData.csv  
 │ │ ├── trees.csv  
 ├── README.md  
-
+```
 ---
 
 ## Scripts
