@@ -6,7 +6,7 @@ Below is the structure of the folder and brief descriptions of all included scri
 ---
 
 ## Directory Structure
-
+```
 ├── week2  
 │ ├── code  
 │ │ ├── align_seqs.py  
@@ -38,7 +38,7 @@ Below is the structure of the folder and brief descriptions of all included scri
 │ │ ├── TestOaksData.csv  
 │ │ ├── testcsv.csv  
 ├── README.md  
-
+```
 ---
 
 ## Scripts
