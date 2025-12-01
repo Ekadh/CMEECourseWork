@@ -40,24 +40,206 @@ Below is the structure of the folder and brief descriptions of all included scri
 
 ## Scripts
 
-1. **apply1.R** — A script that using the apply group of functions in R to calculate row means and variances.  
-2. **apply2.R** — A script that uses apply to perform a defined function on an object.  
-3. **basic_io.R** — Basic input-output script using write. and read. commands.  
-6. **boilerplate.py** — First R script with a function that outputs the class of the input.  
-7. **break.R** — A R script that has a while loop that has a break if a condition is met.  
-8. **browse.R** — An exponential growth plotting function in R, using a pre-allocated vector.  
-9. **control_flow.py** — An R script with loops to illustrate control-flow statements.  
-10. **DataWrang.R** — Wrangling the Pound Hill dataset by manipulating the data.  
-11. **Florida.R** — A permutation analysis to calculate whether Key West is getting warmer by the year.  
-12. **Florida.tex** — A Latex file (use pdflatex) interpreting the values from Florida.R  
-13. **next.R** — An R script using a for loop with a next command within it.  
-14. **PP_Regress.R** — An R script to visualise and regress Prey mass vs Predator mass across lifestages and feeding types.  
-15. **preallocate.R** — An R script that times how long it takes for a function to run using pre-allocation.
-16. **R_conditionals.R** — An R script that illustrate the use of conditions inside functions.  
-17. **sample.R** — An R script that shows how the apply group of functions reduces time taken to perform operations on data.  
-18. **SQLinR.R** — A script to get and add data to/from a remote database.  
-19. **tree_heights.R** — An R script to extract heights of trees from a dataset.  
-20. **vectorize1.R** — A script to compare timings for running code with/without vectorisation.  
+Below is a description of each script together with its purpose, usage, and example commands.
+
+1. **apply1.R**
+
+Applies summary functions across rows and columns of a matrix.
+
+Purpose:
+Calculate row means, row variances, and column means using apply().
+
+Usage:
+
+source("apply1.R")
+
+2. **apply2.R**
+
+Uses apply() to run a custom function on matrix rows.
+
+Purpose:
+Apply a user-defined function that scales rows based on the sum of their values.
+
+Usage:
+
+source("apply2.R")
+
+3. **basic_io.R**
+
+Demonstrates basic read/write operations in R.
+
+Purpose:
+Import a CSV file, write it back out, and explore different write options.
+
+Usage:
+
+source("basic_io.R")
+
+4. **boilerplate.R**
+
+First R function script; prints the class of two input arguments.
+
+Purpose:
+Illustrate writing and calling simple functions in R.
+
+Usage:
+
+source("boilerplate.R")
+my_function(1, "mew")
+
+5. **break.R**
+
+Uses a while loop with a break condition.
+
+Purpose:
+Illustrate breaking out of loops when a threshold is reached.
+
+Usage:
+
+source("break.R")
+
+6. **browse.R**
+
+Exponential growth model with browser() for debugging.
+
+Purpose:
+Demonstrate vector preallocation and interactive debugging inside loops.
+
+Usage:
+
+source("browse.R")
+
+7. **control_flow.R**
+
+Examples of if, for, and while loops in R.
+
+Purpose:
+Practice logic structures and iteration patterns.
+
+Usage:
+
+source("control_flow.R")
+
+8. **DataWrang.R**
+
+Wrangles and reshapes the Pound Hill dataset.
+
+Purpose:
+Data cleaning, transposition, melt() reshaping, factor conversion, and summarisation.
+
+Usage:
+
+source("DataWrang.R")
+
+9. **Florida.R**
+
+Permutation test to determine whether Key West temperatures are increasing.
+
+Purpose:
+Calculate observed and null correlations, generate histogram, compute p-values.
+
+Usage:
+
+source("Florida.R")
+
+10. **Florida.tex**
+
+LaTeX file summarising results from Florida.R.
+
+Purpose:
+Produce a formatted PDF report interpreting the permutation test.
+
+Usage:
+
+pdflatex Florida.tex
+
+11. **next.R**
+
+For-loop demonstrating the use of next to skip iterations.
+
+Purpose:
+Show how to continue the loop without executing remaining code in the iteration.
+
+Usage:
+
+source("next.R")
+
+12. **PP_Regress.R**
+
+Plots log-scaled predator–prey mass regressions and exports linear model summaries.
+
+Purpose:
+Produce regression plots across feeding types and lifestages; compute slope, intercept, R, and p-values.
+
+Usage:
+
+source("PP_Regress.R")
+
+13. **preallocate.R**
+
+Compares runtime of functions with and without vector preallocation.
+
+Purpose:
+Illustrate major speed differences between reallocating vs preallocating vectors.
+
+Usage:
+
+source("preallocate.R")
+
+14. **R_conditionals.R**
+
+Collection of conditional-based functions (even/odd, powers of 2, primality).
+
+Purpose:
+Demonstrate nested if logic and numeric testing.
+
+Usage:
+
+source("R_conditionals.R")
+
+15. **sample.R**
+
+Shows how sample(), loops, lapply(), and sapply() perform repeated sampling calculations.
+
+Purpose:
+Compare efficiency of loops, vectorised functions, and apply-family operations.
+
+Usage:
+
+source("sample.R")
+
+16. **SQLinR.R**
+
+Connects to a SQLite database, writes/queries tables, and imports CSV data into SQL.
+
+Purpose:
+Demonstrate basic SQL operations inside R using the sqldf and RSQLite packages.
+
+Usage:
+
+source("SQLinR.R")
+
+17. **tree_heights.R**
+
+Computes tree heights from ground distance and angle measurements.
+
+Purpose:
+Apply trigonometric formulae and export enriched dataset.
+
+Usage:
+
+source("tree_heights.R")
+
+18. **vectorize1.R**
+
+Compares loop-based summation to vectorised sum().
+
+Purpose:
+Demonstrate the dramatic performance difference from vectorisation.
+
+Usage:
+
+source("vectorize1.R")
 
 ---
 
