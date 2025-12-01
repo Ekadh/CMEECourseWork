@@ -1,5 +1,14 @@
-#1 wc -l ../data/fasta/*.fasta
-#2 cat ../data/fasta/E.coli.fasta | tail -n +2
-#3 cat ../data/fasta/E.coli.fasta | tail -n +2 | tr -d '\n' | wc -m
-#4 cat ../data/fasta/E.coli.fasta | tail -n +2 | tr -d '\n' | grep -o -i atgc | wc -l
-#5 echo "scale=3; $(cat ../data/fasta/E.coli.fasta | tail -n +2 | tr -d '\n' | grep -o -i '[at]' | wc -l)/$(cat ../data/fasta/E.coli.fasta | tail -n +2 | tr -d '\n' | grep -o -i '[gc]' | wc -l)" | bc
+# Author: Ekadh er925@ic.ac.uk
+# Date: Oct 2025
+# Desc: Answers to the FASTA exercise
+
+#1 Counts the number of lines of the FASTA file
+wc -l ../data/fasta/*.fasta
+#2 Skips the header and prints everything for the E.coli genome
+cat ../data/fasta/E.coli.fasta | tail -n +2
+#3 Removes the newline characters and counts the number of bases in E.coli
+cat ../data/fasta/E.coli.fasta | tail -n +2 | tr -d '\n' | wc -m
+#4 Counts occurences of ATGC blocks in E.coli
+cat ../data/fasta/E.coli.fasta | tail -n +2 | tr -d '\n' | grep -o -i atgc | wc -l
+#5 Calculates Chargaff's ratio of AT/GC in E.coli
+echo "scale=3; $(cat ../data/fasta/E.coli.fasta | tail -n +2 | tr -d '\n' | grep -o -i '[at]' | wc -l)/$(cat ../data/fasta/E.coli.fasta | tail -n +2 | tr -d '\n' | grep -o -i '[gc]' | wc -l)" | bc

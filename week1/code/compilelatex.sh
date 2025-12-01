@@ -1,4 +1,8 @@
 #!/bin/bash
+# Author: Ekadh er925@ic.ac.uk
+# Date: Oct 2025
+# Desc: Compiles a .tex file
+
 pdflatex $1.tex
 bibtex $1
 pdflatex $1.tex

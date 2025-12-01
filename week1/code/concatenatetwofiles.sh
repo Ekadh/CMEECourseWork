@@ -1,15 +1,23 @@
 #!/bin/bash
-# Check results folder for the output
+# Author: Ekadh er925@ic.ac.uk
+# Date: Oct 2025
+# Desc: Concatenates two files
+
+# Checks whether there are 3 arguments including the output
 if [ $# -lt 3 ]
 then
     echo "Please input the two files to be concatenated and the name of the output file (check the results folder afterwards)"
     exit 1
 fi
+
+# Checks whether the first/second file have been inputted
 if [ ! -f "$1" ] || [ ! -f "$2" ]
 then 
     echo "At least one of the files does not exist"
     exit 2
 fi
+
+#First adds the contents from file 1, then file 2 into the output file
 cat $1 > "../results/$(basename "$3")"
 cat $2 >> "../results/$(basename "$3")"
 echo "The merged file from $(basename "$1") and $(basename "$2") have been combined into $(basename "$3"), here is the output:"
