@@ -6,7 +6,7 @@ __version__ = '0.0.1'
 import sys
 
 def import_file_sequences():
-    """ Import the sequence file. store sequences in a list and calculate lengths """
+    """ Import the sequence file, store sequences in a list and calculate lengths """
     seqs = []
     current_seq = ""
     with open('../data/testfasta.fasta', 'r') as f:
@@ -54,32 +54,31 @@ def calculate_score(s1, s2, l1, l2, startpoint):
     print(" ")
     return score
 
-#import ipdb; ipdb.set_trace()
+def find_best_alignment_and_save(s1, s2, l1, l2):
+    """Find the best alignment score and save the result to file."""
+    my_best_align = None
+    my_best_score = -1
 
-# Test the function with some example starting points:
-# calculate_score(s1, s2, l1, l2, 0)
-# calculate_score(s1, s2, l1, l2, 1)
-# calculate_score(s1, s2, l1, l2, 5)
+    for i in range(l1):
+        z = calculate_score(s1, s2, l1, l2, i)
+        if z > my_best_score:
+            my_best_align = "." * i + s2
+            my_best_score = z
+
+    with open("../results/align_output.txt", 'w') as out:
+        out.write(f"Best alignment:\n{my_best_align}\n")
+        out.write(f"{s1}\n")
+        out.write(f"Best number of matches: {my_best_score}")
+
+    return my_best_score
 
 def main(argv):
     s1, s2, l1, l2 = import_file_sequences()
     
-    my_best_align = None
-    my_best_score = -1
+   # Call new modular function
+    best_score = find_best_alignment_and_save(s1, s2, l1, l2)
 
-    for i in range(l1): # Note that you just take the last alignment with the highest score
-        """ Aligns sequences by adding dots to change startpoint and counting matches """
-        z = calculate_score(s1, s2, l1, l2, i)
-        if z > my_best_score:
-            my_best_align = "." * i + s2 # think about what this is doing!
-            my_best_score = z 
-
-    with open("../results/align_output.txt", 'w') as out:
-        """ Writes output to a text file, check results folder """
-        out.write(f"Best alignment:\n{my_best_align}\n")
-        out.write(f"{s1}\n")
-        out.write(f"Best number of matches: {my_best_score}")
-    print("Best score:", my_best_score)
+    print("Best score:", best_score)
     return 0
 
 if __name__ == "__main__":
