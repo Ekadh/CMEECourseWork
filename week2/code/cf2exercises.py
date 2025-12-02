@@ -1,5 +1,10 @@
+# Author: Ekadh er925@ic.ac.uk
+# Date: Oct 2025
+# Desc: A group of functions that print character strings using loops
+
 ## LOOP FUNCTIONS ##
 
+#A function that prints hello for every value of x divisible by 3
 def hello_1(x):
     for j in range(x):
         if j % 3 == 0:
@@ -8,6 +13,7 @@ def hello_1(x):
 
 hello_1(12)
 
+#A function that prints hello for every value of j in range x that is divisible by 5 or 4 with a remainder of 3
 def hello_2(x):
     for j in range(x):
         if j % 5 == 3:
@@ -18,6 +24,7 @@ def hello_2(x):
 
 hello_2(12)
 
+#A function that prints hello between the range of values x and y
 def hello_3(x, y):
     for i in range(x, y):
         print("hello")
@@ -25,6 +32,7 @@ def hello_3(x, y):
 
 hello_3(3, 17)
 
+#A function that prints hello for every 3 values of x until x is 15
 def hello_4(x):
     while x != 15:
         print("hello")
@@ -33,6 +41,7 @@ def hello_4(x):
 
 hello_4(0)
 
+#A function that prints hello 3 times when x is 31 and once when x is 18
 def hello_5(x):
     while x < 100:
         if x == 31:
@@ -45,8 +54,7 @@ def hello_5(x):
 
 hello_5(12)
 
-## WHILE LOOP WITH BREAK ##
-
+#A function that print hello + a number y while y is less than 7
 def hello_6(x, y):
     while x:
         print("hello_" + str(y))

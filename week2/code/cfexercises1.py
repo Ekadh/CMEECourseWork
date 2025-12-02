@@ -29,7 +29,9 @@ def foo_3(x=7,y=8,z=2):
 
 
 def foo_4(x=6):
-    """Factorial calculator #1"""
+    """Factorial calculator using iteration. Returns x! for non-negative integers."""
+    if x < 0:
+        raise ValueError("Factorial is undefined for negative numbers")
     result = 1
     for i in range(1, x + 1):
         result = result * i
@@ -37,14 +39,18 @@ def foo_4(x=6):
 
 
 def foo_5(x=5):
-    """Factorial calculator #2"""
-    if x ==1:
+    """Factorial calculator using recursion. Returns x! for non-negative integers."""
+    if x < 0:
+        raise ValueError("Factorial is undefined for negative numbers")
+    if x == 0 or x == 1:
         return 1
-    return x * foo_5(x - 1) ## Recursive function to calculate factorials
+    return x * foo_5(x - 1)
 
 
 def foo_6(x=5):
-    """Factorial calculator #3"""
+    """Factorial calculator using a while loop"""
+    if x < 0:
+        raise ValueError("Factorial is undefined for negative numbers")
     facto = 1
     while x >= 1:
         facto = facto * x
@@ -56,11 +62,11 @@ def main(argv):
     print(foo_1(12))
     print(foo_2(2, 6))
     print(foo_3(6, 1, 25))
-    print(foo_4(4))
-    print(foo_5(3))
-    print(foo_6(6))
+    print(foo_4(3))
+    print(foo_5(2))
+    print(foo_6(5))
     return 0
 
 if __name__ == "__main__":
-    status = main(sys.argv) ## makes sure that the def(main) function is called from command line
+    status = main(sys.argv)
     sys.exit(status)
