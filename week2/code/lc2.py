@@ -1,3 +1,7 @@
+# Author: Ekadh er925@ic.ac.uk
+# Date: Oct 2025
+# Desc: A practical that extracts rainfall data from a tuple of tuples
+
 # Average UK Rainfall (mm) for 1910 by month
 # http://www.metoffice.gov.uk/climate/uk/datasets
 rainfall = (('JAN',111.4),
@@ -17,14 +21,14 @@ rainfall = (('JAN',111.4),
 # (1) Use a list comprehension to create a list of month,rainfall tuples where
 # the amount of rain was greater than 100 mm.
 
-hundred_mm = [row for row in rainfall if row[1] > 100]
+hundred_mm = [month for month in rainfall if month[1] > 100]
 
 print("Months and rainfall amounts where rainfall has exceeded 100mm in the UK in 1910: ", hundred_mm)
  
 # (2) Use a list comprehension to create a list of just month names where the
 # amount of rain was less than 50 mm. 
 
-fifty_mm = [row[0] for row in rainfall if row[1] < 50]
+fifty_mm = [month[0] for month in rainfall if month[1] < 50]
 
 print("Months that received less than 50mm of rainfall in the UK in 1910: ", fifty_mm)
 
@@ -34,18 +38,18 @@ print("Months that received less than 50mm of rainfall in the UK in 1910: ", fif
 ## (1) using conventional for loops
 
 hundred_mm = []
-for row in rainfall:
-    if row[1] > 100:
-        hundred_mm.append(row)
+for month in rainfall:
+    if month[1] > 100:
+        hundred_mm.append(month)
 
 print("Months and rainfall amounts where rainfall has exceeded 100mm in the UK in 1910: ", hundred_mm)
 
 ## (2) using conventional for loops
 
 fifty_mm = []
-for row in rainfall:
-    if row[1] < 50:
-        fifty_mm.append(row[0])
+for month in rainfall:
+    if month[1] < 50:
+        fifty_mm.append(month[0])
 
 print("Months that received less than 50mm of rainfall in the UK in 1910: ", fifty_mm)
 

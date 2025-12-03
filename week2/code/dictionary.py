@@ -1,3 +1,7 @@
+# Author: Ekadh er925@ic.ac.uk
+# Date: Oct 2025
+# Desc: A practical to create a dictionary with orders as keys and species as values
+
 taxa = [ ('Myotis lucifugus','Chiroptera'),
          ('Gerbillus henleyi','Rodentia',),
          ('Peromyscus crinitus', 'Rodentia'),
@@ -28,11 +32,10 @@ for mammal, order in taxa:
     taxa_dic[order].add(mammal)
 
 print(taxa_dic)
-    
-
 
 # Now write a list comprehension that does the same (including the printing after the dictionary has been created)  
  
 #### Your solution here #### 
+taxa_dic = {}
 print(taxa_dic := {order: {mammal for mammal, o in taxa if o == order} for _, order in taxa})
 

@@ -1,3 +1,7 @@
+# Author: Ekadh er925@ic.ac.uk
+# Date: Oct 2025
+# Desc: A practical that extracts bird names and body masses from a tuple of tuples
+
 birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),
           ('Delichon urbica','House martin',19),
           ('Junco phaeonotus','Yellow-eyed junco',19.5),
