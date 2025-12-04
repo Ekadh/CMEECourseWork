@@ -1,10 +1,7 @@
-##DataWrang.R
-##Author: Ekadh Ranganathan
-##Date: 31st October 2025
+# Author: Ekadh er925@ic.ac.uk
+# Date: Oct 2025
+# Desc: Wrangling the Pound Hill Dataset
 
-################################################################
-################## Wrangling the Pound Hill Dataset ############
-################################################################
 library(tidyverse)
 ############# Load the dataset ###############
 # header = false because the raw data don't have real headers
@@ -17,8 +14,6 @@ MyMetaData <- read.csv("../data/PoundHillMetaData.csv", header = TRUE, sep = ";"
 head(MyData)
 dim(MyData)
 str(MyData)
-fix(MyData) #you can also do this
-fix(MyMetaData)
 
 ############# Transpose ###############
 # To get those species into columns and treatments into rows 
@@ -36,8 +31,6 @@ colnames(TempData) <- MyData[1,] # assign column names from original data
 ############# Convert from wide to long format  ###############
 require(reshape2) # load the reshape2 package
 
-?melt #check out the melt function
-
 MyWrangledData <- melt(TempData, id=c("Cultivation", "Block", "Plot", "Quadrat"), variable.name = "Species", value.name = "Count")
 
 MyWrangledData[, "Cultivation"] <- as.factor(MyWrangledData[, "Cultivation"])
@@ -53,7 +46,15 @@ dim(MyWrangledData)
 ############# Exploring the data (extend the script below)  ###############
 
 # Practice data manipulations in tidyverse
+MyWrangledData <- dplyr::as_tibble(MyWrangledData)
+MyWrangledData
+class(MyWrangledData)
+glimpse(MyWrangledData)
+filter(MyWrangledData, Count>100)
+slice(MyWrangledData, 10:15)
 
 MyWrangledData %>%
     group_by(Species) %>%
         summarise(avg = mean(Count))
+
+aggregate(MyWrangledData$Count, list(MyWrangledData$Species), FUN=mean)
