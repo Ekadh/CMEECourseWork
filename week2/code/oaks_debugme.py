@@ -1,3 +1,7 @@
+# Author: Ekadh er925@ic.ac.uk
+# Date: Oct 2025
+# Desc: A script that has a bug in the name of 'quercus'
+
 import csv
 import sys
 

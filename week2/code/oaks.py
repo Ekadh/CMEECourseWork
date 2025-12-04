@@ -1,4 +1,6 @@
-## Script to find only oak trees from a list of tree species using different methods
+# Author: Ekadh er925@ic.ac.uk
+# Date: Oct 2025
+# Desc: Script to find only oak trees from a list of tree species using different methods
 
 taxa = [ 'Quercus robur',
          'Fraxinus excelsior',
@@ -32,7 +34,6 @@ for species in taxa:
 print(oak_loops)
 
 ## Setting UPPERCASE using LIST COMPRE ##
-
 oak_lc = set([species.upper() for species in taxa if is_an_oak(species)])
 print(oaks_lc)
 

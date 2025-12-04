@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Author: Ekadh er925@ic.ac.uk
+# Date: Oct 2025
+# Desc: A script that shows sys.argv functionality
 
 import sys
 

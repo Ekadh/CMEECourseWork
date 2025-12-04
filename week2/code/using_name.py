@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-# Filename: using_name.py
+# Author: Ekadh er925@ic.ac.uk
+# Date: Oct 2025
+# Desc: A script that demonstrates the use of __name__ in python programs
 
 if __name__ == '__main__':
     print('This program is run autonomously')

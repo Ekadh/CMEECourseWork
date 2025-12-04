@@ -1,3 +1,7 @@
+# Author: Ekadh er925@ic.ac.uk
+# Date: Oct 2025
+# Desc: A script that runs the doctest for the is_an_oak function
+
 import csv
 import sys
 import doctest
