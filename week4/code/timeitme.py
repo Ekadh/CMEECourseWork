@@ -1,3 +1,7 @@
+# Author: Ekadh er925@ic.ac.uk
+# Date: Oct 2025
+# Desc: A script that compares the performance of loops vs list comprehensions and string join methods
+
 # loops vs. list comprehensions: which is faster?
 
 iters = 1000000
