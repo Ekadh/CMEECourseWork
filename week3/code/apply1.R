@@ -1,6 +1,6 @@
-##apply1.R
-##Author: Ekadh Ranganathan
-##Date: 31st October 2025
+# Author: Ekadh er925@ic.ac.uk
+# Date: Oct 2025
+# Desc: A script to demonstrate the use of the apply function
 
 M <- matrix(rnorm(100), 10, 10)
 

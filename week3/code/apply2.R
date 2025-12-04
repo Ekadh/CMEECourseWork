@@ -1,6 +1,6 @@
-##apply2.R
-##Author: Ekadh Ranganathan
-##Date: 31st October 2025
+# Author: Ekadh er925@ic.ac.uk
+# Date: Oct 2025
+# Desc: A script that demonstrates the use of the apply function
 
 SomeOperation <- function(v) {
     if (sum(v) > 0) {

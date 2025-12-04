@@ -1,6 +1,6 @@
-##PP_Regress.R
-##Author: Ekadh Ranganathan
-##Date: 31st October 2025
+# Author: Ekadh er925@ic.ac.uk
+# Date: Oct 2025
+# Desc: A script for data visualisation and management using predator-prey data
 
 library(tidyverse)
 # Loading csv
@@ -33,16 +33,20 @@ p <- p + facet_wrap(Type.of.feeding.interaction ~., ncol = 1, strip.position = "
   guides(color = guide_legend(nrow = 1))
 print(p)
 
-ggsave(filename = "../results/Visualised_regression.pdf", plot = p)
+#Saving the figure
+ggsave(filename = "../results/Visualised_regression.pdf", plot = p, width = 8, height = 12)
 
+#Saving the regression results to a csv file
 regs <- ecol_archives %>%
   group_by(Type.of.feeding.interaction, Predator.lifestage) %>%
   summarise({
-    model <- lm(log(Predator.mass) ~ log(Prey.mass), data = cur_data())
+    model <- lm(log(Predator.mass) ~ log(Prey.mass), data = pick(everything()))
     fpstats <- summary(model)
     
     fstat <- fpstats$fstatistic
     
+
+    # Calculates p-value from F-statistic if available, otherwise set to NA
     if (!is.null(fstat) && all(is.finite(fstat))) {
       p_val <- pf(fstat[1], fstat[2], fstat[3], lower.tail = FALSE)
     } else {

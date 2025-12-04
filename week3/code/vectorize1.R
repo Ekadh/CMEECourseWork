@@ -1,6 +1,6 @@
-##vectorize1.R
-##Author: Ekadh Ranganathan
-##Date: 31st October 2025
+# Author: Ekadh er925@ic.ac.uk
+# Date: Oct 2025
+# Desc: A script to compare performance of loops vs vectorized operations in R
 
 M <- matrix(runif(1000000), 1000, 1000)
 

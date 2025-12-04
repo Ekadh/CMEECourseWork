@@ -1,6 +1,6 @@
-##preallocate.R
-##Author: Ekadh Ranganathan
-##Date: 31st October 2025
+# Author: Ekadh er925@ic.ac.uk
+# Date: Oct 2025
+# Desc: A script that shows preallocation in R
 
 NoPreallocFun <- function(x) {
     a <- vector()

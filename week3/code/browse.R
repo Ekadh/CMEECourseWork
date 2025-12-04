@@ -1,6 +1,6 @@
-##browse.R
-##Author: Ekadh Ranganathan
-##Date: 31st October 2025
+# Author: Ekadh er925@ic.ac.uk
+# Date: Oct 2025
+# Desc: A script to demonstrate the use of the browser function, and also vectorisation
 
 Exponential <- function(N0 = 1, r = 1, generations = 10) {
 # Exponential growth simulation

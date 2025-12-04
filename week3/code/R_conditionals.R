@@ -1,6 +1,6 @@
-##R_conditionals.R
-##Author: Ekadh Ranganathan
-##Date: 31st October 2025
+# Author: Ekadh er925@ic.ac.uk
+# Date: Oct 2025
+# Desc: A script that illustrates the use of conditional functions in R
 
 # Conditional function 1
 

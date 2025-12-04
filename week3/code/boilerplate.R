@@ -1,6 +1,6 @@
-##boilerplate.R
-##Author: Ekadh Ranganathan
-##Date: 31st October 2025
+# Author: Ekadh er925@ic.ac.uk
+# Date: Oct 2025
+# Desc: A simple boilerplate function in R
 
 my_function <- function(Arg1, Arg2) {
 

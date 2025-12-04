@@ -1,6 +1,6 @@
-##sample.R
-##Author: Ekadh Ranganathan
-##Date: 31st October 2025
+# Author: Ekadh er925@ic.ac.uk
+# Date: Oct 2025
+# Desc: A script to demonstrate sampling and apply functions in R
 
 ## Some functions to learn sample, lapply and sapply ##
 
@@ -76,25 +76,3 @@ print(system.time(sapply_sample(popn, n, num)))
 
 print("Using the vectorized lapply function (on a list) took:" )
 print(system.time(lapply_sample(popn, n, num)))
-
-## tapply notes
-
-# x <- 1:20
-# x
-# [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
-# y <- factor(rep(letters[1:5], each = 4))
-# y
-# [1] a a a a b b b b c c c c d d d d e e e e
-#Levels: a b c d e
-# tapply(x, y, sum)
-# a  b  c  d  e 
-# 10 26 42 58 74 
-
-## Using 'by' notes ##
-
-# attach(iris)
-# by(iris[,1:2], iris$Species, colMeans)
-
-## Using 'replicate' notes ##
-
-# replicate(10, runif(5))

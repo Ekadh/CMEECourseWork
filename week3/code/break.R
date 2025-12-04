@@ -1,7 +1,6 @@
-##break.R
-##Author: Ekadh Ranganathan
-##Date: 31st October 2025
-# Adding breaks in R
+# Author: Ekadh er925@ic.ac.uk
+# Date: Oct 2025
+# Desc: A script for adding breaks in R loops
 
 i <- 0
 

@@ -1,6 +1,7 @@
-##control_flow.R
-##Author: Ekadh Ranganathan
-##Date: 31st October 2025
+# Author: Ekadh er925@ic.ac.uk
+# Date: Oct 2025
+# Desc: A script that demonstrates the use of for and while loops in R
+
 # if statements
 
 a <- TRUE

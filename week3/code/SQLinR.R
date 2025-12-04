@@ -1,9 +1,10 @@
-##SQLinR.R
-##Author: Ekadh Ranganathan
-##Date: 31st October 2025
+# Author: Ekadh er925@ic.ac.uk
+# Date: Oct 2025
+# Desc: A script that demonstrates the use of SQL in R
 
-#install the sqlite package
-install.packages('sqldf')
+#install the sqlite package if not already installed
+if (!requireNamespace("sqldf", quietly = TRUE))
+    install.packages("sqldf")
 
 # To load the packages
 library(sqldf)
