@@ -5,8 +5,8 @@
 import csv
 
 ## Transfers each row of the csv file into a temp list and prints each line ##
-with open('../data/testcsv.csv', 'r') as f:
-    csvread = csv.reader(f)
+with open('../data/testcsv.csv', 'r') as input:
+    csvread = csv.reader(input)
     temp = []
     for row in csvread:
         temp.append(tuple(row))
@@ -14,10 +14,10 @@ with open('../data/testcsv.csv', 'r') as f:
         print("The species is ", row[0])
 
 ## Writes a csv file with species AND body mass 
-with open('../data/testcsv.csv') as f:
-    with open('../data/bodymass.csv', 'w') as g:
-        csvread = csv.reader(f)
-        csvwrite = csv.writer(g)
+with open('../data/testcsv.csv') as input:
+    with open('../results/bodymass.csv', 'w') as output:
+        csvread = csv.reader(input)
+        csvwrite = csv.writer(output)
         for row in csvread:
             print(row)
             csvwrite.writerow([row[0], row[4]])
