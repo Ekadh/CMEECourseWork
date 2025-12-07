@@ -1,5 +1,3 @@
-
-
 # Allow code, data and .sh scripts
 !*.sh
 !*/code/**
@@ -28,4 +26,3 @@ myenv/*
 ..
 *.aux
 *.log
-*.pdf
