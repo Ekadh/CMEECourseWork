@@ -59,12 +59,12 @@ Generate a PDF from a .tex file.
 
 Usage:
 
-bash compilelatex.sh <filename_without_extension>
+bash compilelatex.sh <filename>
 
 
 Example:
 
-bash compilelatex.sh firstexample
+bash compilelatex.sh firstexample.tex
 
 3. **concatenatetwofiles.sh**
 
@@ -102,10 +102,10 @@ Replace commas with spaces and output .txt to ../results/.
 
 Usage:
 
-bash csvtospace.sh input.csv output.txt
+bash csvtospace.sh input.csv
 
 
-Output: ../results/output.txt
+Output: ../results/filename.txt
 
 6. **firstbiblio.bib**
 
@@ -124,7 +124,7 @@ Produces firstexample.pdf when compiled.
 Usage:
 Compile manually or run:
 
-bash compilelatex.sh firstexample
+bash compilelatex.sh firstexample.tex
 
 8. **myexamplescript.sh**
 
@@ -164,7 +164,7 @@ bash tiff2png.sh
 Contains the Unix commands used to complete the FASTA-file exercises.
 
 Purpose:
-Command reference for Week 1 tasks.
+Learn how to manage genomic data using Linux commands.
 
 12. **variables.sh**
 
@@ -178,7 +178,7 @@ Usage:
 bash variables.sh arg1 arg2
 
 
-Example Interactive Session:
+Example:
 
 Enter two numbers separated by a space
 5 7
