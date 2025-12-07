@@ -25,6 +25,11 @@ echo
 ## Assigned variables: Reading values from user input
 echo 'Enter two numbers separated by a space'
 read VAR1 VAR2
+#Check if 2 numbers are entered
+if [ -z "$VAR1" ] || [ -z "$VAR2" ]; then
+  echo "Error: Please enter two numbers."
+  exit 1
+fi
 echo
 echo 'you entered' $VAR1 'and' $VAR2 '; Their sum is:'
 

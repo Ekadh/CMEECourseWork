@@ -2,9 +2,10 @@
 # Date: Oct 2025
 # Desc: A script that demonstrates the use of SQL in R
 
-#install the sqlite package if not already installed
-if (!requireNamespace("sqldf", quietly = TRUE))
-    install.packages("sqldf")
+#Check if the sqldf package is installed, if not, give an error message
+if (!requireNamespace("sqldf", quietly = TRUE)) {
+  stop("The 'sqldf' package is required but not installed. Please install it using install.packages('sqldf').")
+}
 
 # To load the packages
 library(sqldf)
@@ -49,7 +50,7 @@ dbGetQuery(db, "SELECT * FROM Consumer WHERE ConPhylum='Chordata'")
 # The easiest way is to read the csv files into R as data frames.
 # Then the data frames are imported into the database.
 
-Resource <- read.csv("../Data/Resource.csv")  # Read csv files into R
+Resource <- read.csv("../data/Resource.csv")  # Read csv files into R
 
 # Import data frames into database
  dbWriteTable(conn = db, name = "Resource", value = Resource, row.names = FALSE)
