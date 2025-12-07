@@ -6,7 +6,7 @@
 #Checks whether the input file was provided
 if [ $# -lt 1 ]
 then
-    echo "Please input the csv file and the space-delimited output filename"
+    echo "Please input the csv file to be converted"
     exit 1
 fi
 

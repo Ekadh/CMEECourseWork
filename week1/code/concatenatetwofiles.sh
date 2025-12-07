@@ -14,7 +14,7 @@ fi
 if [ ! -f "$1" ] || [ ! -f "$2" ]
 then 
     echo "At least one of the files does not exist"
-    exit 2
+    exit 1
 fi
 
 #First adds the contents from file 1, then file 2 into the output file
