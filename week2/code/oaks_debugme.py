@@ -5,14 +5,34 @@
 import csv
 from difflib import SequenceMatcher
 import sys
+import doctest
 
 #Checking if the name is an oak using similarity
 def is_an_oak(name):
-    """ Returns True if name is starts with 'quercus' """
+    """
+    Returns True if name is similar to 'quercus'
+
+    >>> is_an_oak('Fagus sylvatica')
+    False
+    >>> is_an_oak('Quercuss')
+    True
+    >>> is_an_oak('quercuss')
+    True
+    >>> is_an_oak('quercs')
+    True
+    >>> is_an_oak('quercus')
+    True
+    >>> is_an_oak('Quercs')
+    True
+    >>> is_an_oak('Quercs rober')
+    True
+    >>> is_an_oak('Querqus rober')
+    True
+    """
     name_lower = name.lower()
     target = "quercus"
     similarity = SequenceMatcher(None, name_lower, target).ratio()
-    return similarity >= 0.7
+    return similarity >= 0.6
 
 def main(argv): 
     input = open('../data/TestOaksData.csv','r')
@@ -33,4 +53,5 @@ def main(argv):
     return 0
     
 if (__name__ == "__main__"):
+    doctest.testmod()
     status = main(sys.argv)
