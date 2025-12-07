@@ -1,21 +1,27 @@
 # Author: Ekadh er925@ic.ac.uk
 # Date: Oct 2025
-# Desc: A script that has a bug in the name of 'quercus'
+# Desc: A script that has a bug (now fixed) in the name of 'quercus'
 
 import csv
+from difflib import SequenceMatcher
 import sys
 
-#Define function
+#Checking if the name is an oak using similarity
 def is_an_oak(name):
     """ Returns True if name is starts with 'quercus' """
-    return 'querc' in name.lower()
+    name_lower = name.lower()
+    target = "quercus"
+    similarity = SequenceMatcher(None, name_lower, target).ratio()
+    return similarity >= 0.7
 
 def main(argv): 
-    f = open('../data/TestOaksData.csv','r')
-    g = open('../data/JustOaksData.csv','w')
-    taxa = csv.reader(f)
-    csvwrite = csv.writer(g)
+    input = open('../data/TestOaksData.csv','r')
+    output = open('../results/JustOaksData.csv','w')
+    taxa = csv.reader(input)
+    csvwrite = csv.writer(output)
     oaks = set()
+    #This code still keeps the header row, it is fixed in the groupwork assignment
+    #For loop to go through each row in the csv file
     for row in taxa:
         print(row)
         print ("The genus is: ") 
