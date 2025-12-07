@@ -51,29 +51,29 @@ Calculate row means, row variances, and column means using apply().
 
 Usage:
 
-source("apply1.R")
+source("apply1.R") from R OR Rscript apply1.R from bash
 
 2. **apply2.R**
 
 Uses apply() to run a custom function on matrix rows.
 
 Purpose:
-Apply a user-defined function that scales rows based on the sum of their values.
+Apply a user defined function that scales rows based on the sum of their values.
 
 Usage:
 
-source("apply2.R")
+source("apply2.R") from R OR Rscript apply2.R from bash
 
 3. **basic_io.R**
 
 Demonstrates basic read/write operations in R.
 
 Purpose:
-Import a CSV file, write it back out, and explore different write options.
+Import a CSV file and write it back out.
 
 Usage:
 
-source("basic_io.R")
+source("basic_io.R") from R OR Rscript basic_io.R from bash
 
 4. **boilerplate.R**
 
@@ -84,7 +84,7 @@ Illustrate writing and calling simple functions in R.
 
 Usage:
 
-source("boilerplate.R")
+source("boilerplate.R") from R OR Rscript boilerplate.R from bash
 my_function(1, "mew")
 
 5. **break.R**
@@ -96,29 +96,29 @@ Illustrate breaking out of loops when a threshold is reached.
 
 Usage:
 
-source("break.R")
+source("break.R") from R OR Rscript break.R from bash
 
 6. **browse.R**
 
 Exponential growth model with browser() for debugging.
 
 Purpose:
-Demonstrate vector preallocation and interactive debugging inside loops.
+Demonstrate vector preallocation and debugging inside loops.
 
 Usage:
 
-source("browse.R")
+source("browse.R") from R OR Rscript browse.R from bash
 
 7. **control_flow.R**
 
 Examples of if, for, and while loops in R.
 
 Purpose:
-Practice logic structures and iteration patterns.
+Practice looping structures.
 
 Usage:
 
-source("control_flow.R")
+source("control_flow.R") from R OR Rscript control_flow.R from bash
 
 8. **DataWrang.R**
 
@@ -129,7 +129,7 @@ Data cleaning, transposition, melt() reshaping, factor conversion, and summarisa
 
 Usage:
 
-source("DataWrang.R")
+source("DataWrang.R") from R OR Rscript DataWrang.R from bash
 
 9. **Florida.R**
 
@@ -140,7 +140,7 @@ Calculate observed and null correlations, generate histogram, compute p-values.
 
 Usage:
 
-source("Florida.R")
+source("Florida.R") from R OR Rscript Florida.R from bash
 
 10. **Florida.tex**
 
@@ -151,7 +151,7 @@ Produce a formatted PDF report interpreting the permutation test.
 
 Usage:
 
-pdflatex Florida.tex
+bash compilelatex.sh Florida.tex OR pdflatex Florida.tex
 
 11. **next.R**
 
@@ -162,29 +162,29 @@ Show how to continue the loop without executing remaining code in the iteration.
 
 Usage:
 
-source("next.R")
+source("next.R") from R OR Rscript next.R from bash
 
 12. **PP_Regress.R**
 
 Plots log-scaled predator–prey mass regressions and exports linear model summaries.
 
 Purpose:
-Produce regression plots across feeding types and lifestages; compute slope, intercept, R, and p-values.
+Produce regression plots across feeding types and lifestages.
 
 Usage:
 
-source("PP_Regress.R")
+source("PP_Regress.R") from R OR Rscript PP_Regress.R from bash
 
 13. **preallocate.R**
 
 Compares runtime of functions with and without vector preallocation.
 
 Purpose:
-Illustrate major speed differences between reallocating vs preallocating vectors.
+Illustrate speed differences between reallocating vs preallocating vectors.
 
 Usage:
 
-source("preallocate.R")
+source("preallocate.R") from R OR Rscript preallocate.R from bash
 
 14. **R_conditionals.R**
 
@@ -195,7 +195,7 @@ Demonstrate nested if logic and numeric testing.
 
 Usage:
 
-source("R_conditionals.R")
+source("R_conditionals.R") from R OR Rscript R_conditionals.R from bash
 
 15. **sample.R**
 
@@ -206,7 +206,7 @@ Compare efficiency of loops, vectorised functions, and apply-family operations.
 
 Usage:
 
-source("sample.R")
+source("sample.R") from R OR Rscript sample.R from bash
 
 16. **SQLinR.R**
 
@@ -217,7 +217,7 @@ Demonstrate basic SQL operations inside R using the sqldf and RSQLite packages.
 
 Usage:
 
-source("SQLinR.R")
+source("SQLinR.R") from R OR Rscript SQLin.R from bash
 
 17. **tree_heights.R**
 
@@ -228,7 +228,7 @@ Apply trigonometric formulae and export enriched dataset.
 
 Usage:
 
-source("tree_heights.R")
+source("tree_heights.R") from R OR Rscript tree_heights.R from bash
 
 18. **vectorize1.R**
 
@@ -239,7 +239,7 @@ Demonstrate the dramatic performance difference from vectorisation.
 
 Usage:
 
-source("vectorize1.R")
+source("vectorize1.R") from R OR Rscript vectorize1.R from bash
 
 ---
 
