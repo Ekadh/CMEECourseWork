@@ -28,7 +28,6 @@ Below is the structure of the folder and brief descriptions of all included scri
 │ │ ├── oaks_debugme.py  
 │ │ ├── sysargv.py  
 │ │ ├── test_control_flow.py  
-│ │ ├── test_oaks_debugme.py  
 │ │ ├── tuple.py  
 │ │ ├── using_name.py  
 │ ├── data  
@@ -207,7 +206,7 @@ python3 oaks.py
 
 17. **oaks_debugme.py**
 
-Buggy version of the oak-filtering script.
+Debugged version of the oak-filtering script.
 
 Purpose:
 Debugging and CSV reading/writing practice.
@@ -235,15 +234,7 @@ Run doctests:
 
 python3 -m doctest -v test_control_flow.py
 
-20. **test_oaks_debugme.py**
-
-Doctest script for the oak-identification function in oaks_debugme.py.
-
-Usage:
-
-python3 -m doctest -v test_oaks_debugme.py
-
-21. **tuple.py**
+20. **tuple.py**
 
 Prints the contents of a tuple of bird tuples.
 
@@ -251,7 +242,7 @@ Usage:
 
 python3 tuple.py
 
-22. **using_name.py**
+21. **using_name.py**
 
 Demonstrates the behaviour of __name__ depending on whether the script is run or imported.
 
