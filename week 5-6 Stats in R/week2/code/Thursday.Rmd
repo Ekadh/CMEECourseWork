@@ -1,0 +1,13 @@
+Variance-Covariance analysis: Handout 1
+Let's just clear the whole workspace and remove all the NAs:
+```{r}
+rm(list=ls())
+d<-read.table("../data/SparrowSize.txt", header=TRUE)
+
+dat <- d[which(!is.na(d$Tarsus) & !is.na(d$Wing) & !is.na(d$Sex) & !is.na(d$Cohort)), ]
+
+d1 <- data.frame(dat$Tarsus, dat$Wing, dat$Sex)
+pairs(d1, pch=19, cex=0.7)
+cor.test(d1$Wing, d1$Tarsus)
+```
+
