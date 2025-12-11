@@ -11,8 +11,10 @@ Below is the structure of the folder and brief descriptions of all included scri
 │ ├── code  
 │ │ ├── profileitme.py  
 │ │ ├── profileme2.py  
-│ │ ├── timeitme.py  
-│ ├── README.md
+│ │ ├── timeitme.py 
+│ ├── data
+│ ├── results 
+├── README.md
 ```
 
 ## Scripts

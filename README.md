@@ -41,6 +41,8 @@ The work spans biological data formats, simulation tasks, data visualisation, re
 - Added `profileme.py` (loop-based implementations: `my_squares`, `my_join`) and `profileme2.py` (vectorised/list-comprehension + NumPy variant) to compare approaches.
 - Created `timeitme.py` to benchmark loop vs list-comprehension and string concatenation vs join using Python's `timeit` module.
 
+> Note: many scripts in the weekly `code/` folders use relative paths (e.g. `../data`, `../results`) and therefore expect you to run them from the corresponding `weekN/code` directory. To run from the repository root instead, either `cd` into the week's `code/` directory or use the wrapper/launch commands shown in each week's README.
+
 ---
 
 ## Project Structure  

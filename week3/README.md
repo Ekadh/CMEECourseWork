@@ -35,12 +35,13 @@ Below is the structure of the folder and brief descriptions of all included scri
 │ ├── data  
 │ │ ├── EcolArchives-E089-51-D1.csv  
 │ │ ├── KeyWestAnnualMeanTemperature.RData  
-│ │ ├── Histogram.png   
+│ │ ├── Histogram.pdf   
 │ │ ├── PoundHillData.csv  
 │ │ ├── PoundHillMetaData.csv  
 │ │ ├── Resource.csv  
 │ │ ├── Results.txt  
 │ │ ├── trees.csv  
+│ ├── results  
 ├── README.md  
 ```
 ---

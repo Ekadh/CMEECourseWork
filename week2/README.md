@@ -26,16 +26,17 @@ Below is the structure of the folder and brief descriptions of all included scri
 │ │ ├── myexamplescript.py  
 │ │ ├── oaks.py  
 │ │ ├── oaks_debugme.py  
+│ │ ├── scope.py  
 │ │ ├── sysargv.py  
 │ │ ├── test_control_flow.py  
 │ │ ├── tuple.py  
 │ │ ├── using_name.py  
 │ ├── data  
-│ │ ├── JustOaksData.csv  
-│ │ ├── bodymass.csv   
 │ │ ├── testfasta.fasta  
 │ │ ├── TestOaksData.csv  
 │ │ ├── testcsv.csv  
+│ │ ├── test.txt  
+│ ├── results  
 ├── README.md  
 ```
 ---
