@@ -1,6 +1,6 @@
-# week1: Scripts and data
+# week4: Scripts and data
 
-This directory contains all code and data files for **week 1** of the coursework.  
+This directory contains all code and data files for **week 4** of the coursework.  
 Below is the structure of the folder and brief descriptions of all included scripts and data files.
 
 ---
@@ -21,17 +21,19 @@ Below is the structure of the folder and brief descriptions of all included scri
 
 Profiles two functions implemented using explicit Python loops.
 
-Purpose:
+### Purpose:
 my_squares() builds a list of squares using a for-loop.
 
 my_join() constructs a long string using repeated concatenation.
 
 run_my_funcs() executes both functions to allow timing/profiling.
 
-Usage:
+### Usage:
 
-python3 profileitme.py
-
+```bash
+# run from the `week4` directory
+python3 code/profileme.py
+```
 
 Example Output:
 Prints x and y values, then runs both functions.
@@ -40,39 +42,46 @@ Prints x and y values, then runs both functions.
 
 A vectorised and slightly more efficient version of profileitme.py, using NumPy and an improved string-joining approach.
 
-Purpose:
-my_squares() uses a list comprehension wrapped in np.array for faster numeric operations.
+### Purpose:
+`my_squares()` uses a list comprehension wrapped in `np.array` for faster numeric operations.
 
-my_join() appends strings in a loop (still slow, used for comparison).
+`my_join()` appends strings in a loop (still slow, used for comparison).
 
-run_my_funcs() runs both functions for profiling.
+`run_my_funcs()` runs both functions for profiling.
 
 Dependencies:
 Requires NumPy.
 
-Usage:
+### Usage:
 
-python3 profileme2.py
+
+```bash
+# run the NumPy/vectorised variant
+python3 code/profileme2.py
+```
 
 3. **timeitme.py**
 
 Compares runtime performance between functions imported from profileitme.py and profileme2.py using timeit.
 
-Purpose:
+### Purpose:
 Timing loops vs list comprehensions for building lists of squares
 
-Usage:
+### Usage:
 
-python3 timeitme.py
-
+```bash
+# run the timing comparisons
+python3 code/timeitme.py
+```
 
 This script imports functions like:
 
+```py
 from profileme import my_squares as my_squares_loops
 from profileme2 import my_squares as my_squares_lc
+```
 
-
-and uses Python’s timeit module to measure execution speed.
+and uses Python’s `timeit` module to measure execution speed.
 
 ## Data
 

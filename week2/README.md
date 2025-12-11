@@ -46,209 +46,273 @@ Below is the structure of the folder and brief descriptions of all included scri
 
 Aligns two DNA sequences from a FASTA file and outputs the best alignment.
 
-Purpose:
+### Purpose:
 Find the best alignment between two sequences by sliding and scoring matches.
 
-Usage:
+### Usage:
 
-python3 align_seqs.py
+```bash
+# align two sequences from the test FASTA (run from `week2`)
+python3 code/align_seqs.py
+```
 
-
-Output:
-Alignment written to ../results/align_output.txt.
+Output written to `../results/align_output.txt`.
 
 2. **basic_csv.py**
 
 Reads a CSV file and writes selected columns to a new CSV.
 
-Purpose:
+### Purpose:
 Practice reading and writing CSV files using csv.reader and csv.writer.
 
-Usage:
+### Usage:
 
-python3 basic_csv.py
+```bash
+# read a CSV and write selected columns
+python3 code/basic_csv.py
+```
 
 3–5. **basic_io1.py, basic_io2.py, basic_io3.py**
 
 Scripts demonstrating basic file reading, writing, and pickling.
 
-Purpose:
+### Purpose:
+- `basic_io1.py`: open and read text files
+- `basic_io2.py`: write lists to a text file
+- `basic_io3.py`: store/load Python objects with `pickle`
 
-basic_io1.py: open and read text files
+### Usage (run each as needed):
 
-basic_io2.py: write lists to a text file
-
-basic_io3.py: store/load Python objects with pickle
-
-Usage:
-
-python3 basic_io1.py
-python3 basic_io2.py
-python3 basic_io3.py
+```bash
+# basic file I/O examples
+python3 code/basic_io1.py
+python3 code/basic_io2.py
+python3 code/basic_io3.py
+```
 
 6. **boilerplate.py**
 
 Simple example Python program showing structure of main() and __name__ == "__main__".
 
-Purpose:
+### Purpose:
 Print a message and demonstrate program entry points.
 
-Usage:
+### Usage:
 
-python3 boilerplate.py
+```bash
+# simple program demonstrating __name__ and main()
+python3 code/boilerplate.py
+```
 
 7. **cfexercises1.py**
 
 Collection of functions for mathematical operations and control flow exercises.
 
-Purpose:
+### Purpose:
 Practise writing functions involving square roots, comparisons, sorting, and factorials.
 
-Usage:
+### Usage:
 
-python3 cfexercises1.py
+```bash
+python3 code/cfexercises1.py
+```
 
 8. **cfexercises2.py**
 
 Exercises demonstrating loops and conditional execution.
 
-Purpose:
+### Purpose:
 Explore for-loops, while-loops, and break statements.
 
-Usage:
+### Usage:
 
-python3 cfexercises2.py
+```bash
+python3 code/cfexercises2.py
+```
 
 9. **control_flow.py**
 
 Illustrates conditional logic with functions for parity, divisors, and prime detection.
 
-Purpose:
+### Purpose:
 Understand branching logic and prime-number calculations.
 
-Usage:
+### Usage:
 
-python3 control_flow.py
+```bash
+python3 code/control_flow.py
+```
 
 10. **debugme.py**
 
 Buggy script containing a ZeroDivisionError.
 
-Purpose:
+### Purpose:
 Practise debugging Python functions.
 
-Usage:
+### Usage:
 
-python3 debugme.py
+```bash
+python3 code/debugme.py
+```
 
 11. **dictionary.py**
 
 Creates a dictionary mapping mammal orders to species using loops and a comprehension.
 
-Purpose:
+### Purpose:
 Practise building dictionaries and using set operations.
 
-Usage:
+### Usage:
 
-python3 dictionary.py
+```bash
+python3 code/dictionary.py
+```
 
 12. **lc1.py**
 
 List comprehension exercises using tuples of bird data.
 
-Purpose:
+### Purpose:
 Extract Latin names, common names, and body mass values using list comprehensions.
 
-Usage:
+### Usage:
 
-python3 lc1.py
+```bash
+python3 code/lc1.py
+```
 
 13. **lc2.py**
 
 More list comprehension exercises using rainfall data.
 
-Purpose:
+### Purpose:
 Filter data using conditions (>100 mm rainfall, <50 mm rainfall).
 
-Usage:
+### Usage:
 
-python3 lc2.py
+```bash
+python3 code/lc2.py
+```
 
 14. **loops.py**
 
 Simple examples of for and while loops.
 
-Purpose:
+### Purpose:
 Understand iteration over ranges, lists, and while-loops with break statements.
 
-Usage:
+### Usage:
 
-python3 loops.py
+```bash
+python3 code/loops.py
+```
 
 15. **myexamplescript.py**
 
 Contains a function that squares a number.
 
-Usage:
+### Purpose:
+Provide a small example function (`square`) and show how to import/run it.
 
-python3 myexamplescript.py
+### Usage:
+
+```bash
+python3 code/myexamplescript.py
+```
 
 16. **oaks.py**
 
 Finds oak species from a list using functions and list comprehensions.
 
-Purpose:
+### Purpose:
 Filter species names beginning with Quercus.
 
-Usage:
+### Usage:
 
-python3 oaks.py
+```bash
+python3 code/oaks.py
+```
 
 17. **oaks_debugme.py**
 
 Debugged version of the oak-filtering script.
 
-Purpose:
+### Purpose:
 Debugging and CSV reading/writing practice.
 
-Usage:
+### Usage:
 
-python3 oaks_debugme.py
+```bash
+python3 code/oaks_debugme.py
+```
 
 18. **sysargv.py**
 
 Demonstrates the use of sys.argv for passing command-line arguments.
 
-Usage:
+### Purpose:
+Learn how to handle command-line inputs in Python.
 
-python3 sysargv.py arg1 arg2
+### Usage:
+
+```bash
+# demonstrate command-line arguments
+python3 code/sysargv.py arg1 arg2
+```
 
 19. **test_control_flow.py**
 
 Uses doctests to validate functions from control_flow.py.
 
-Purpose:
+### Purpose:
 Learn how to write and run doctests.
 
-Run doctests:
+### Usage:
 
-python3 -m doctest -v test_control_flow.py
+```bash
+# run doctests for control flow examples (run from `week2` directory)
+python3 -m doctest -v code/test_control_flow.py
+```
 
 20. **tuple.py**
 
 Prints the contents of a tuple of bird tuples.
 
-Usage:
+### Purpose:
+Demonstrate tuple unpacking and iteration.
 
-python3 tuple.py
+### Usage:
+
+```bash
+python3 code/tuple.py
+```
 
 21. **using_name.py**
 
 Demonstrates the behaviour of __name__ depending on whether the script is run or imported.
 
-Usage:
+### Purpose:
+Show how __name__ changes when a script is executed directly vs imported.
 
-python3 using_name.py
+### Usage:
+
+```bash
+python3 code/using_name.py
+```
+
+22. **scope.py**
+
+Demonstrates local vs global scope and how variable lookups behave in functions.
+
+### Purpose:
+Illustrate scope rules in Python (local, enclosing, global, builtins).
+
+### Usage:
+
+```bash
+python3 code/scope.py
+```
 
 ---
 
