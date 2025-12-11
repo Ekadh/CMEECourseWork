@@ -17,7 +17,7 @@ The work spans biological data formats, simulation tasks, data visualisation, re
 
 ---
 
-## Learning Outcomes / Progress Summary
+## Progress Summary
 
 ### **Week 1 – Unix/Linux**
 - Learned command-line workflows for manipulating files, automating tasks, converting file formats, and compiling LaTeX.
@@ -35,6 +35,11 @@ The work spans biological data formats, simulation tasks, data visualisation, re
 - Applied vectorisation and preallocation for performance.
 - Conducted ecological regressions (predator–prey scaling) and analysed climate time series data.
 - Practised connecting to remote databases using R.
+
+### **Week 4 – Back to Python**
+- Explored Python performance and profiling by implementing and benchmarking small scripts.
+- Added `profileme.py` (loop-based implementations: `my_squares`, `my_join`) and `profileme2.py` (vectorised/list-comprehension + NumPy variant) to compare approaches.
+- Created `timeitme.py` to benchmark loop vs list-comprehension and string concatenation vs join using Python's `timeit` module.
 
 ---
 
@@ -65,7 +70,28 @@ The work spans biological data formats, simulation tasks, data visualisation, re
 
 ##  Dependencies  
 Most scripts rely on the standard libraries for their respective languages.  
-No additional external packages are required unless specified inside the script files.
+Here are some additional dependencies used in specific weeks:
+
+- **System tools:** `pdflatex` (TeX Live / MacTeX) — used to compile `.tex` files in week1/week3; `ImageMagick` (`convert`, `mogrify`) — used for image conversions (e.g. `tiff2png`); `git` — repository version control.
+- **Python (3.x):** `numpy` — used in `week4/profileme2.py` for vectorised numeric operations; `pytest` (optional) — useful for running tests (e.g. `week2/test_control_flow.py`).
+- **R (>= 4):** `tidyverse` (includes `dplyr`, `ggplot2`, `tidyr`) — used for data wrangling and plotting in week3; `DBI` and `RSQLite` — used for SQL examples found in `week3/SQLinR.R`.
+
+Install examples (macOS / zsh):
+
+```bash
+# system
+brew install imagemagick
+brew install --cask mactex          
+# provides pdflatex (large install)
+
+# python packages (in a virtualenv)
+python3 -m pip install --upgrade pip
+python3 -m pip install numpy pytest
+
+# install common R packages (run inside R)
+R -e "install.packages(c('tidyverse','DBI','RSQLite'), repos='https://cloud.r-project.org')"
+```
+
 
 ---
 
